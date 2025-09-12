@@ -14,15 +14,15 @@ Programación. Presentación. 1DAW. Curso 2025/2026.
 
 ## Contenidos
 
-1. [Introducción a la programación de software](https://github.com/joseluisgs/Programacion-01-2024-2025)
-2. [Programación Estructurada y Modular](https://github.com/joseluisgs/Programacion-02-2024-2025)
-3. [Aplicación de las estructuras de almacenamiento](https://github.com/joseluisgs/Programacion-03-2024-2025)
-4. [Programación Orientada a Objetos](https://github.com/joseluisgs/Programacion-04-05-2024-2025)
-5. [Programación Avanzada Orientada a Objetos](https://github.com/joseluisgs/Programacion-04-05-2024-2025)
-6. [Programación Funcional, Genérica y Colecciones](https://github.com/joseluisgs/Programacion-06-2024-2025)
-7. [Lectura y escritura de información externa. Ficheros](https://github.com/joseluisgs/Programacion-07-2024-2025)
-8. [Programación con Bases de Datos](https://github.com/joseluisgs/Programacion-08-2024-2025)
-9. [Programación Interactiva  e Interfaces Gráficas de Usuario](https://github.com/joseluisgs/Programacion-09-2024-2025)
+1. [Introducción a la programación de software]([GitHub - jjguillen/programacion_2025-2026](https://github.com/jjguillen/programacion_2025-2026))
+2. [Programación Estructurada y Modular]([GitHub - jjguillen/programacion_2025-2026](https://github.com/jjguillen/programacion_2025-2026))
+3. [Aplicación de las estructuras de almacenamiento]([GitHub - jjguillen/programacion_2025-2026](https://github.com/jjguillen/programacion_2025-2026))
+4. [Programación Orientada a Objetos]([GitHub - jjguillen/programacion_2025-2026](https://github.com/jjguillen/programacion_2025-2026))
+5. [Programación Avanzada Orientada a Objetos]([GitHub - jjguillen/programacion_2025-2026](https://github.com/jjguillen/programacion_2025-2026))
+6. [Programación Funcional, Genérica y Colecciones]([GitHub - jjguillen/programacion_2025-2026](https://github.com/jjguillen/programacion_2025-2026))
+7. [Lectura y escritura de información externa. Ficheros]([GitHub - jjguillen/programacion_2025-2026](https://github.com/jjguillen/programacion_2025-2026))
+8. [Programación con Bases de Datos]([GitHub - jjguillen/programacion_2025-2026](https://github.com/jjguillen/programacion_2025-2026))
+9. [Programación Interactiva  e Interfaces Gráficas de Usuario]([GitHub - jjguillen/programacion_2025-2026](https://github.com/jjguillen/programacion_2025-2026))
 10. Proyecto Aplicado
 
 El índice y contenidos puede variar a lo largo del curso para adaptarse al proceso de enseñanza-aprendizaje.
