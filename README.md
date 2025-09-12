@@ -1,6 +1,6 @@
 # Programación - Presentación
 
-Programación. Presentación. 1DAW. Curso 2024/2025.
+Programación. Presentación. 1DAW. Curso 2025/2026.
 
 ![imagen](./images/programacion.png)
 
@@ -13,6 +13,7 @@ Programación. Presentación. 1DAW. Curso 2024/2025.
   - [Licencia de uso](#licencia-de-uso)
 
 ## Contenidos
+
 1. [Introducción a la programación de software](https://github.com/joseluisgs/Programacion-01-2024-2025)
 2. [Programación Estructurada y Modular](https://github.com/joseluisgs/Programacion-02-2024-2025)
 3. [Aplicación de las estructuras de almacenamiento](https://github.com/joseluisgs/Programacion-03-2024-2025)
@@ -27,9 +28,11 @@ Programación. Presentación. 1DAW. Curso 2024/2025.
 El índice y contenidos puede variar a lo largo del curso para adaptarse al proceso de enseñanza-aprendizaje.
 
 ## Resultados de aprendizaje
+
 De acuerdo al [Real Decreto 686/2010](https://www.boe.es/boe/dias/2010/06/12/pdfs/BOE-A-2010-9269.pdf), de 20 de mayo de 2010, y actualizado en el [Real Decreto. 405/2023](https://www.boe.es/boe/dias/2023/06/03/pdfs/BOE-A-2023-13221.pdf), de 29 de mayo de 2023 por el que se establece el título de
 Técnico Superior en Desarrollo de Aplicaciones Web y se fijan sus
 enseñanzas mínimas, los resultados de aprendizaje son:
+
 1. Reconoce la estructura de un programa informático.
 2. Escribe y prueba programas sencillos.
 3. Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.
@@ -41,6 +44,7 @@ enseñanzas mínimas, los resultados de aprendizaje son:
 9. Gestiona información almacenada en bases de datos relacionales.
 
 ### Evaluación
+
 - Cada RA se evaluará independientemente de los demás, obteniéndose una calificación numérica de 0 a 10.
 
 - Para que un RA sea considerado superado, el alumno deberá tener una calificación en dicho RA promedio >= 5 en base a los instrumentos indicados en la programación didáctica teniendo en cuenta los Criterios de Evaluación asociados.
@@ -49,11 +53,7 @@ enseñanzas mínimas, los resultados de aprendizaje son:
 
 ## Autor
 
-Codificado con :sparkling_heart: por [José Luis González Sánchez](https://twitter.com/JoseLuisGS_)
-
-[![Twitter](https://img.shields.io/twitter/follow/JoseLuisGS_?style=social)](https://twitter.com/JoseLuisGS_)
-[![GitHub](https://img.shields.io/github/followers/joseluisgs?style=social)](https://github.com/joseluisgs)
-[![GitHub](https://img.shields.io/github/stars/joseluisgs?style=social)](https://github.com/joseluisgs)
+Codificado por [Javier Guillén]([jjguillen (Javier Guillén) · GitHub](https://github.com/jjguillen))
 
 ### Contacto
 
@@ -61,42 +61,17 @@ Codificado con :sparkling_heart: por [José Luis González Sánchez](https://twi
   Cualquier cosa que necesites házmelo saber por si puedo ayudarte 💬.
 </p>
 <p>
- <a href="https://joseluisgs.dev" target="_blank">
+ <a href="mailto:jguiben709@g.educaand.es" target="_blank">
         <img src="https://joseluisgs.github.io/img/favicon.png" 
     height="30">
-    </a>  &nbsp;&nbsp;
-    <a href="https://github.com/joseluisgs" target="_blank">
-        <img src="https://distreau.com/github.svg" 
-    height="30">
-    </a> &nbsp;&nbsp;
-        <a href="https://twitter.com/JoseLuisGS_" target="_blank">
-        <img src="https://i.imgur.com/U4Uiaef.png" 
-    height="30">
-    </a> &nbsp;&nbsp;
-    <a href="https://www.linkedin.com/in/joseluisgonsan" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png" 
-    height="30">
-    </a>  &nbsp;&nbsp;
-    <a href="https://g.dev/joseluisgs" target="_blank">
-        <img loading="lazy" src="https://googlediscovery.com/wp-content/uploads/google-developers.png" 
-    height="30">
-    </a>  &nbsp;&nbsp;
-<a href="https://www.youtube.com/@joseluisgs" target="_blank">
-        <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" 
-    height="30">
-    </a>  
+    </a>    
+    
 </p>
 
 ## Licencia de uso
 
-Este repositorio y todo su contenido está licenciado bajo licencia **Creative Commons**, si desea saber más, vea
-la [LICENSE](https://joseluisgs.dev/docs/license/). Por favor si compartes, usas o modificas este proyecto cita a su
-autor, y usa las mismas condiciones para su uso docente, formativo o educativo y no comercial.
+Este repositorio y todo su contenido está licenciado bajo licencia **Creative Commons** Por favor si compartes, usas o modificas este proyecto cita a su autor, y usa las mismas condiciones para su uso docente, formativo o educativo y no comercial.
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">
-JoseLuisGS</span>
-by <a xmlns:cc="http://creativecommons.org/ns#" href="https://joseluisgs.dev/" property="cc:attributionName" rel="cc:attributionURL">
-José Luis González Sánchez</a> is licensed under
-a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
-Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional License</a>.<br />Creado a partir de la obra
-en <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/joseluisgs" rel="dct:source">https://github.com/joseluisgs</a>.
+<a href="https://creativecommons.org">Apuntes DAW</a> © 2026 by <a href="https://creativecommons.org">Javier Guillén</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+
+<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
