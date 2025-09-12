@@ -2,7 +2,7 @@
 
 Programación. Presentación. 1DAW. Curso 2025/2026.
 
-![imagen](./images/programacion.png)
+![imagen](./Images/Programacion.png)
 
 - [Programación - Presentación](#programación---presentación)
   - [Contenidos](#contenidos)
@@ -64,8 +64,8 @@ Codificado por [Javier Guillén]([jjguillen (Javier Guillén) · GitHub](https:/
  <a href="mailto:jguiben709@g.educaand.es" target="_blank">
         <img src="https://joseluisgs.github.io/img/favicon.png" 
     height="30">
-    </a>    
-    
+    </a>
+
 </p>
 
 ## Licencia de uso
