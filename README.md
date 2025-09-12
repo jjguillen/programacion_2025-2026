@@ -53,7 +53,7 @@ enseñanzas mínimas, los resultados de aprendizaje son:
 
 ## Autor
 
-Codificado por [Javier Guillén]([jjguillen (Javier Guillén) · GitHub](https://github.com/jjguillen))
+Codificado por [Javier Guillén](https://github.com/jjguillen)
 
 ### Contacto
 
