@@ -14,7 +14,7 @@ Programación. Presentación. 1DAW. Curso 2025/2026.
 
 ## Contenidos
 
-1. [Introducción a la programación de software]([GitHub - jjguillen/programacion_2025-2026](https://github.com/jjguillen/programacion_2025-2026))
+1. [Introducción a la programación de software]((https://github.com/jjguillen/programacion_2025-2026)
 2. [Programación Estructurada y Modular]([GitHub - jjguillen/programacion_2025-2026](https://github.com/jjguillen/programacion_2025-2026))
 3. [Aplicación de las estructuras de almacenamiento]([GitHub - jjguillen/programacion_2025-2026](https://github.com/jjguillen/programacion_2025-2026))
 4. [Programación Orientada a Objetos]([GitHub - jjguillen/programacion_2025-2026](https://github.com/jjguillen/programacion_2025-2026))
