@@ -4,7 +4,7 @@ public class EjemploTiposDatos {
     public static void main(String[] args) {
         //REPOSITORIO GITHUB: github.com/jjguillen/programacion_2025-2026
         //MÁS VAMOS A USAR
-        //long, double, String
+        //long, double, String, boolean
 
         //ENTEROS
         int edad = 22;
