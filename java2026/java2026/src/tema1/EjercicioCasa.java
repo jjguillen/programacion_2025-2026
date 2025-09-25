@@ -22,24 +22,27 @@ public class EjercicioCasa {
         //299792 km - 1s
         //? km - distanciasegundos
 
-        final double vLuz = 299792.458; //Constante (final) => su valor no va a cambiar
+        //DISEÑO  v = e/t
+        //Nave va a 298000 km  -  1 s
+        //         distanciaKM -  ? s
+
+        final double VLUZ = 299792.458; //Constante (final) => su valor no va a cambiar
         double distanciaAnios = 4.24;
         double distanciaSegundos;
         double distanciaKm;
 
+        final double VNAVE = 298000;
+        double tiempoNaveProximaSegundos, tiempoNaveProximaAnios;
+
+        //Resolución primera parte
         distanciaSegundos = distanciaAnios * 365 * 24 * 60 * 60;
-        distanciaKm = distanciaSegundos * vLuz;
+        distanciaKm = distanciaSegundos * VLUZ;
 
         System.out.println("Distancia en segundos luz a Próxima Centauri " + distanciaSegundos);
         System.out.println("Distancia en km a Próxima Centauri " + distanciaKm);
 
-        //DISEÑO  v = e/t
-        //Nave va a 298000 km  -  1 s
-        //         distanciaKM -  ? s
-        final double velocidadNave = 298000;
-        double tiempoNaveProximaSegundos, tiempoNaveProximaAnios;
-
-        tiempoNaveProximaSegundos = distanciaKm / velocidadNave;
+        //Resolución segunda parte
+        tiempoNaveProximaSegundos = distanciaKm / VNAVE;
         tiempoNaveProximaAnios = tiempoNaveProximaSegundos / 365 / 24 / 60 / 60;
 
         System.out.println("La nave tardaría " + tiempoNaveProximaSegundos + " segundos en llegar");
