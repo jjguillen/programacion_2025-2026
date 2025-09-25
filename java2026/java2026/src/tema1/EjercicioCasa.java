@@ -12,5 +12,39 @@ public class EjercicioCasa {
         //pues despejar los segundos
         //Pista3 -> velocidad de la luz 299.900 km/s
 
+        //ANÁLISIS
+        //Constante -> velocidadLuz
+        //Entrada -> distanciaAniosLuz, velocidadNave
+        //Salida -> distanciaKm, tiempoSegundosNaveProxima
+
+        //DISEÑO
+        //Distancia en años -> 4.24 años pasar a segundos (distanciasegundos)
+        //299792 km - 1s
+        //? km - distanciasegundos
+
+        final double vLuz = 299792.458; //Constante (final) => su valor no va a cambiar
+        double distanciaAnios = 4.24;
+        double distanciaSegundos;
+        double distanciaKm;
+
+        distanciaSegundos = distanciaAnios * 365 * 24 * 60 * 60;
+        distanciaKm = distanciaSegundos * vLuz;
+
+        System.out.println("Distancia en segundos luz a Próxima Centauri " + distanciaSegundos);
+        System.out.println("Distancia en km a Próxima Centauri " + distanciaKm);
+
+        //DISEÑO  v = e/t
+        //Nave va a 298000 km  -  1 s
+        //         distanciaKM -  ? s
+        final double velocidadNave = 298000;
+        double tiempoNaveProximaSegundos, tiempoNaveProximaAnios;
+
+        tiempoNaveProximaSegundos = distanciaKm / velocidadNave;
+        tiempoNaveProximaAnios = tiempoNaveProximaSegundos / 365 / 24 / 60 / 60;
+
+        System.out.println("La nave tardaría " + tiempoNaveProximaSegundos + " segundos en llegar");
+        System.out.println("La nave tardaría " + tiempoNaveProximaAnios + " años en llegar");
+
+
     }
 }
