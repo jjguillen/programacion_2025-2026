@@ -48,6 +48,6 @@ public class EjercicioCasa {
         System.out.println("La nave tardaría " + tiempoNaveProximaSegundos + " segundos en llegar");
         System.out.println("La nave tardaría " + tiempoNaveProximaAnios + " años en llegar");
 
-
+        //Ha salido bien
     }
 }
