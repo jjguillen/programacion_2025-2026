@@ -36,5 +36,6 @@ public class EjemploCasting {
             System.out.print(caracter);
         }
 
+
     }
 }
