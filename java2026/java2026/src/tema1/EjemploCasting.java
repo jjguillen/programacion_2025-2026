@@ -30,7 +30,8 @@ public class EjemploCasting {
         System.out.println(caracter);
 
         while(true) {
-            caracterInt = (int) (Math.random() * (10000 - 1 + 1)) + 65000;
+            // (int) (Math.random() * (maximo - minimo + 1)) + maximo
+            caracterInt = (int) (Math.random() * (10000 - 1 + 1)) + 10000;
             caracter = (char) caracterInt;
             System.out.print(caracter);
         }
