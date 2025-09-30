@@ -12,10 +12,31 @@ public class EjercicioOperadoresLogicos2 {
         double valorCompra;
         boolean esCumpleaños;
         boolean tienePagosPendientes;
+        boolean aplicaDescuento;
 
         //Dar valor a las variables de entrada
         //Poner la condición
         //Ver lo que debe dar y comprobar el resultado pintándolo
+
+        clienteVip = false;
+        valorCompra = 49;
+        esCumpleaños = true;
+        tienePagosPendientes = false;
+
+        /*
+        aplicaDescuento = ( (clienteVip && valorCompra > 100) ||
+                (clienteVip == false && esCumpleaños == true && valorCompra > 50) ) &&
+                (tienePagosPendientes == false);
+        */
+
+        aplicaDescuento = ( (clienteVip && valorCompra > 100) ||
+                (!clienteVip && esCumpleaños && valorCompra > 50) ) &&
+                (!tienePagosPendientes);
+
+
+        System.out.println("Tiene descuento " + aplicaDescuento);
+
+
 
     }
 }
