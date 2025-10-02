@@ -3,7 +3,7 @@ package tema1;
 import java.util.Scanner;
 
 public class Ejercicio3 {
-    public static void main(String[] args) {
+    static void main(String[] args) {
 
         //Lee de teclado dos valores de tipo double num1, num2
         //Intercambia el valor de las variables y píntalo por pantalla
