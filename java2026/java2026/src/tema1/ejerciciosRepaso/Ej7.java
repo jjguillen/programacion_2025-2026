@@ -13,5 +13,6 @@ public class Ej7 {
         total= sc.nextDouble();
         precioFinal= total - (total * 0.15);
         System.out.println("El precio final es: " + precioFinal);
-    }
+
+   }
 }
