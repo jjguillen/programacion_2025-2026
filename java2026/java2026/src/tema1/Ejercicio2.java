@@ -38,13 +38,6 @@ public class Ejercicio2 {
                 + (0.3 * notaEFinal)
                 + (0.15 * notaTFinal);
 
-        System.out.println("Nota final: " + notaFinal);
-
-
-
-
-
-
-
+        System.out.printf("Nota final: %.2f%n", notaFinal);
     }
 }
