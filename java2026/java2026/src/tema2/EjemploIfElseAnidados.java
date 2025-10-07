@@ -35,6 +35,14 @@ public class EjemploIfElseAnidados {
             System.out.println("No puedes entrar");
         }
 
+        //ES LO MISMO QUE LO DE ABAJO
+        if ( (edad >= 18) || (edad >= 16 && sexo == 'm')
+                || (edad >= 16 && sexo == 'h' && amigoJefe) ) {
+            System.out.println("Puedes entrar");
+        } else {
+            System.out.println("No puedes entrar");
+        }
+
 
 
 
