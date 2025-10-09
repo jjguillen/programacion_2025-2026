@@ -17,7 +17,7 @@ public class EjercicioClase {
         //     1-31 si es enero, marzo, mayo, julio, agosto, octubre, diciembre
 
         int day, month, year;
-        boolean correcto = true;
+        //boolean correcto = true;
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Dime día (1-31)");
@@ -29,42 +29,33 @@ public class EjercicioClase {
 
         if (year < 1900 || year > 2100) { //Comprobamos año
             System.out.println("Año fuera de rango");
-            correcto = false;
         } else if (month < 1 || month > 12) { //Comprobamos mes
             System.out.println("Mes fuera de rango");
-            correcto = false;
-        } else { //Comprobamos día
+        } else { //Entra si el año y el mes está en el rango - Comprobamos día
             switch (month) {
                 case 2:
                     if (day < 1 || day > 28) {
-                        correcto = false;
+                        System.out.println("Día incorrecto");
+                    } else {
+                        System.out.println("Fecha correcta");
                     }
                     break;
                 case 4,6,9,11:
                     if (day < 1 || day > 30) {
-                        correcto = false;
+                        System.out.println("Día incorrecto");
+                    } else {
+                        System.out.println("Fecha correcta");
                     }
                     break;
                 case 1,3,5,7,8,10,12:
                      if (day < 1 || day > 31) {
-                         correcto = false;
+                         System.out.println("Día incorrecto");
+                     } else {
+                         System.out.println("Fecha correcta");
                      }
                      break;
             }
-
-            if (!correcto) {
-                System.out.println("Día del mes incorrecto");
-            } else {
-                System.out.println("Fecha correcta");
-                correcto = true;
-            }
-
         }
-
-
-
-
-
 
 
     }
