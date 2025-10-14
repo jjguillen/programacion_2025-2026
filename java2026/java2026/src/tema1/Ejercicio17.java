@@ -17,6 +17,10 @@ public class Ejercicio17 {
         n = (int) (Math.random() * 200) + 1;
         System.out.println(n * 2);
 
+        //c. Un número real entre 1 y 10
+        double numReal = (Math.random() * 10) + 1;
+        System.out.println("Número real (1-10)= " + numReal);
+
         //f. 5,7,33,77,125
         n = (int) (Math.random() * 5) + 1;
         System.out.println(n);
