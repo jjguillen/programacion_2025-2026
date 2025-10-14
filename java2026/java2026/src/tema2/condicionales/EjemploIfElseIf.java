@@ -1,4 +1,4 @@
-package tema2;
+package tema2.condicionales;
 
 public class EjemploIfElseIf {
     public static void main(String[] args) {

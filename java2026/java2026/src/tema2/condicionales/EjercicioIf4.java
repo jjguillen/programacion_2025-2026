@@ -1,4 +1,4 @@
-package tema2;
+package tema2.condicionales;
 
 public class EjercicioIf4 {
     public static void main(String[] args) {
