@@ -22,7 +22,35 @@ public class EjercicioBucles11 {
         //      incrementar el contador correspondiente
         //Paso6: pintar el resultado final
 
+        int tiradaC1, tiradaC2, tiradaH1, tiradaH2;
+        int sumaC, sumaH;
+        int contRondasGC=0, contRondasGH=0;
 
+        for(int i=1; i<=10; i++) {
+            tiradaC1 = (int) (Math.random() * 6) + 1;
+            tiradaC2 = (int) (Math.random() * 6) + 1;
+            tiradaH1 = (int) (Math.random() * 6) + 1;
+            tiradaH2 = (int) (Math.random() * 6) + 1;
+
+            sumaC = tiradaC1 + tiradaC2;
+            sumaH = tiradaH1 + tiradaH2;
+
+            if(sumaC>sumaH) {
+                contRondasGC++;
+                System.out.println("Cubitus gana");
+            } else {
+                contRondasGH++;
+                System.out.println("Humerus gana");
+            }
+        }
+
+        if (contRondasGC > contRondasGH) {
+            System.out.println("La partida la gana Cubitus");
+        } else if (contRondasGC < contRondasGH) {
+            System.out.println("La partida la gana Humerus");
+        } else {
+            System.out.println("Empate");
+        }
 
 
 
