@@ -18,6 +18,19 @@ public class EjercicioBucles9 {
         //c) comparar que el dado sea == 20 eso es un crítico
         //   Necesito un contador=0 que sume uno cada vez que dado==20
 
+        int dado;
+        int contadorCritico=0;
+
+        for(int num=1; num <= 50; num++) {
+            dado = (int) (Math.random() * 20) + 1;
+            //System.out.println(dado);
+            if (dado == 20) {
+                contadorCritico++;
+            }
+        }
+
+        System.out.println("Han salido " + contadorCritico + " críticos");
+
 
 
 
