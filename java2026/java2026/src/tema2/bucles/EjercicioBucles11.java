@@ -14,6 +14,21 @@ public class EjercicioBucles11 {
         //      sumaC, sumaH
         //      contRondasGC, contRondasGH
 
+        //Paso1: hacer las cuatro tiradas
+        //Paso2: hacer la suma de las tiradas de Cubitus, y la suma de las tiradas de Humerus
+        //Paso3: ver cuál de las dos sumas es mayor y pintar quién gana
+        //Paso4: meter lo anterior en un bucle para 10 rondas
+        //Paso5: hacer un contador para Cubitus y otro para Humerus y cuando gane uno de ellos
+        //      incrementar el contador correspondiente
+        //Paso6: pintar el resultado final
+
+
+
+
+
+
+
+
 
 
 
