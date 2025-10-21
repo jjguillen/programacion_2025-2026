@@ -21,9 +21,9 @@ public class BucleIndicador1 {
             }
         }
 
-        if (esMultiplo) {
+        if (esMultiplo) { //Al menos ha entrado una vez en el if en todas las iteraciones del bucle
             System.out.println("Alguno de los números introducidos es múltiplo de 5");
-        } else {
+        } else { //No ha entrado al if ni una sóla vez en todo el bucle
             System.out.println("No has introducido ningún número múltiplo de 5");
         }
 
