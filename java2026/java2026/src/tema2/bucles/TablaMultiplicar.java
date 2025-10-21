@@ -1,0 +1,22 @@
+package tema2.bucles;
+
+public class TablaMultiplicar {
+    public static void main(String[] args) {
+
+        //Programa que pida un número por teclado y muestre su tabla
+        //de multiplicar
+        //Ejemplo: 7
+        //7x1 = 7
+        //7x2 = 14
+        //7x3 = 21
+        //7x4 = 28
+        //7x5 = 35
+        //7x6 = 42
+        //7x7 = 49
+        //7x8 = 56
+        //7x9 = 63
+        //7x10 = 70
+
+
+    }
+}
