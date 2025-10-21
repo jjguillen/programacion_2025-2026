@@ -20,7 +20,7 @@ public class EsPrimo {
         System.out.println("Dime un número entero: ");
         numero = sc.nextInt();
         boolean esPrimo = true;
-        for(int i=2; i < numero; i++) {
+        for(int i=2; i < Math.sqrt(numero); i++) {
             //Encontrar un divisor
             if (numero % i == 0) {
                 esPrimo = false;
