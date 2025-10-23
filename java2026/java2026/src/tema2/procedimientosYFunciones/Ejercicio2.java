@@ -2,6 +2,16 @@ package tema2.procedimientosYFunciones;
 
 public class Ejercicio2 {
 
+    /**
+     * Procedimiento que pinta tantos asteriscos como indica numAst
+     * @param numAst
+     */
+    public static void pintarAsteriscos(int numAst) {
+        for (int i = 0; i < numAst; i++) {
+            System.out.print("*"); //Sin salto
+        }
+        System.out.println();
+    }
 
     public static void main(String[] args) {
         //Crear un procedimiento que pinte en la misma línea
@@ -9,11 +19,9 @@ public class Ejercicio2 {
         //Ejemplo: pintarAsteriscos(5) --> *****
         //Al final que pinte un salto de línea
 
-        pintarAsteriscos(5);
-        pintarAsteriscos(4);
-        pintarAsteriscos(3);
-        pintarAsteriscos(2);
-        pintarAsteriscos(1);
+        for(int i=1; i<=10; i++) {
+            pintarAsteriscos(i);
+        }
 
     }
 }
