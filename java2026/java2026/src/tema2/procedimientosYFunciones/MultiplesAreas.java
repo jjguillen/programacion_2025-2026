@@ -9,6 +9,9 @@ public class MultiplesAreas {
         System.out.println("2. Área de un cuadrado");
         System.out.println("3. Área de un rectángulo");
         System.out.println("4. Área de un triángulo");
+        System.out.println("5. Área de un rombo"); //(diagonalM * diagonalm) / 2
+        System.out.println("6. Área de un hexágono"); //(lado * 6 * radio) / 2
+
         System.out.println("5. Salir");
     }
 
