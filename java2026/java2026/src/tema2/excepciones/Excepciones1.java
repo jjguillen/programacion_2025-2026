@@ -16,6 +16,7 @@ public class Excepciones1 {
             System.out.println("Por favor introduce un entero");
         } catch (Exception exc) { //Cualquier error capturado
             System.out.println("Error leyendo de teclado");
+            System.out.println(exc.toString());
         }
 
         //SOLO CAPTURA UNA EXCEPCION: la más específica

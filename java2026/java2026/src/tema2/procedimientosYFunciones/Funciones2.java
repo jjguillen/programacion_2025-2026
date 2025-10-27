@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class Funciones2 {
 
     public static int tirarDado(int numCaras) {
-        return (int) (Math.random() * numCaras) + 1;
+        int resultado;
+        resultado = (int) (Math.random() * numCaras) + 1;
+        return resultado;
     }
 
     public static void main(String[] args) {

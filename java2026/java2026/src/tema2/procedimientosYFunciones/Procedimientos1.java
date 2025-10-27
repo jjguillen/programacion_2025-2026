@@ -7,6 +7,7 @@ public class Procedimientos1 {
 
     //NO se ejecuta hasta que no se le llama
     //Es posible reutilizarlo
+    //Si no devuelve nada ponemos -> void
     //El código que se repita es interesante llevarlo a una función o procedimiento
     public static void pintarOpciones() {
         System.out.println("1. Opción 1");
@@ -43,6 +44,8 @@ public class Procedimientos1 {
         } while (opcion != 3);
 
 
-
     }
+
+
+
 }
