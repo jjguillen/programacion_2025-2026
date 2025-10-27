@@ -2,6 +2,9 @@ package tema2.procedimientosYFunciones;
 
 public class Funciones3 {
 
+    public static double areaTriangulo(double base, double altura) {
+        return (base * altura) / 2;
+    }
 
 
     public static void main(String[] args) {
@@ -11,8 +14,8 @@ public class Funciones3 {
 
         double area1, area2;
 
-        area1 = areaTriangulo(3,8);
-        area2 = areaTriangulo(8,5);
+        area1 = areaTriangulo(3.0,8.1);
+        area2 = areaTriangulo(8.5,5.4);
 
         System.out.println("El área es: " + area1);
         System.out.println("El área es: " + area2);
