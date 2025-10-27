@@ -12,6 +12,21 @@ public class MultiplesAreas {
         System.out.println("5. Salir");
     }
 
+    public static double area(double valor1, double valor2, String tipo) {
+        switch (tipo) {
+            case "Circulo":
+                return calcAreaCirculo(valor1);
+            case "Cuadrado":
+                return calcAreaCuadrado(valor1);
+            case "Rectangulo":
+                return calcAreaRectangulo(valor1, valor2);
+            case "Triangulo":
+                return Funciones3.areaTriangulo(valor1, valor2);
+            default:
+                return 0;
+        }
+    }
+
     public static double calcAreaCirculo(double rd) {
         return Math.PI * rd * rd;
     }
@@ -42,26 +57,30 @@ public class MultiplesAreas {
                     case 1:
                         System.out.println("Dime radio: ");
                         radio = sc.nextDouble();
-                        System.out.println("El área es " + calcAreaCirculo(radio));
+                        System.out.println("El área es "
+                                + area(radio,radio,"Circulo"));
                         break;
                     case 2:
                         System.out.println("Dime lado: ");
                         lado = sc.nextDouble();
-                        System.out.println("El área es " + calcAreaCuadrado(lado));
+                        System.out.println("El área es "
+                                + area(lado,lado,"Cuadrado"));
                         break;
                     case 3:
                         System.out.println("Dime base: ");
                         base = sc.nextDouble();
                         System.out.println("Dime altura: ");
                         altura = sc.nextDouble();
-                        System.out.println("El área es " + calcAreaRectangulo(base, altura));
+                        System.out.println("El área es "
+                                + area(base, altura, "Rectangulo"));
                         break;
                     case 4:
                         System.out.println("Dime base: ");
                         base = sc.nextDouble();
                         System.out.println("Dime altura: ");
                         altura = sc.nextDouble();
-                        System.out.println("El área es " + Funciones3.areaTriangulo(base, altura));
+                        System.out.println("El área es "
+                                + area(base, altura, "Triangulo"));
                         break;
                     case 5:
                         System.out.println("Gracias por usar nuestro programa");
