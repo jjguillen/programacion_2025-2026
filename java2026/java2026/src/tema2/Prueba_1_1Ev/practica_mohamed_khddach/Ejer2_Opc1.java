@@ -42,6 +42,9 @@ public class Ejer2_Opc1 {
             }
         } while (numero < 1 || numero > 3);
 
+        //Cerrrar Scanner cada vez que llamamos a la función
+        //sc.close();
+
         return numero;
     }
 
