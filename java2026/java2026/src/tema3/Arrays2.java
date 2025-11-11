@@ -1,8 +1,9 @@
-package tema3.ejercicios;
+package tema3;
 
 import java.util.Scanner;
 
 public class Arrays2 {
+
     public static void main(String[] args) {
         //Los arrays son estructuras fijas, una vez reservada memoria
         //no pueden crecer ni decrecer
@@ -27,7 +28,6 @@ public class Arrays2 {
             System.out.println(palabras[i]);
         }
 
-
-
     }
+
 }
