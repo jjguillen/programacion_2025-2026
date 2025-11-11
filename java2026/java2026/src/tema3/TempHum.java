@@ -13,9 +13,14 @@ public class TempHum {
         //Haz un programa que muestre por pantalla la temperatura y la humedad
         //media conforme vas generando valores aleatorios
 
-        //Si la temperatura media es superior a 30 grados en algún momento debe
+        //Si la temperatura media es superior a 25 grados en algún momento debe
         //parar el bucle y mostrar un mensaje indicando que ha superado la temperatura
         //media permitida.
+
+        double[] temperaturas = new double[100];
+        double[] humedades = new double[100];
+
+
 
 
     }
