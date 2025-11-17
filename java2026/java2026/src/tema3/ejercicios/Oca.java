@@ -42,6 +42,20 @@ public class Oca {
                     System.out.println("Jugador " + (i+1) + ": " + (jugadores[i]+1));
 
                     //Comprobar dónde está -------------------
+
+                    //FIN
+                    if (jugadores[i]+1 == 63 ) {
+                        System.out.println("Jugador " + (i-1) + " has ganado");
+                        return;
+                    }
+                    //Volver para atrás
+                    if (jugadores[i]+1 > 63 ) {
+                        System.out.println("Te has pasado");
+                        jugadores[i] = 63 - (jugadores[i]+1 - 63) - 1;
+                        continue;
+
+                    }
+
                     //MUERTE
                     if (jugadores[i]+1 == muerte) {
                         System.out.println("Has muerto");
@@ -89,19 +103,7 @@ public class Oca {
                         }
                     }
 
-                    //FIN
-                    if (jugadores[i]+1 == 63 ) {
-                        System.out.println("Jugador " + (i-1) + " has ganado");
-                        return;
-                    }
-                    //Volver para atrás
-                    if (jugadores[i]+1 > 63 ) {
-                        jugadores[i] = 63 - (jugadores[i]+1 + tirada - 63);
 
-                        //(posicion + tirada) - (sobra)
-                        //sobra = (posicion + tirada) - 63
-                        //posicion = 63 - (posicion + tirada - 63)
-                    }
 
                 }
 
@@ -109,47 +111,8 @@ public class Oca {
 
             System.out.println("Presiona ENTER para continuar");
             sc.nextLine();
-            /*
-
-            //Comprobar dónde está -------------------
-            //MUERTE
-            if (jugadores[0]+1 == muerte) {
-                System.out.println("Has muerto");
-                jugadores[0] = -10;
-            }
-            //DADOS
-            if (jugadores[0]+1 == dados[0]) {
-                jugadores[0] = dados[1]-1;
-                //Tira otra vez
-            }
-            if (jugadores[0]+1 == dados[1]) {
-                jugadores[0] = dados[0]-1;
-                //Tira otra vez
-            }
-            //PUENTES
-            if (jugadores[0]+1 == puentes[0]) {
-                jugadores[0] = puentes[1]-1;
-                //Tira otra vez
-            }
-            if (jugadores[0]+1 == puentes[1]) {
-                jugadores[0] = puentes[0]-1;
-                //Tira otra vez
-            }
-            //OCAS
-            for(int i=0; i<ocas.length; i++) {
-                if (jugadores[0]+1 == ocas[i]) {
-                    jugadores[0] = ocas[i+1]-1;
-                    //Tirar otra vez
-                    break;
-                }
-            }
-            */
-
 
         }
-
-
-
 
 
 
