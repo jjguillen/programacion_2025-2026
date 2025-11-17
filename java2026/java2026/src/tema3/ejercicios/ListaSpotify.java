@@ -1,5 +1,7 @@
 package tema3.ejercicios;
 
+import java.util.Arrays;
+
 public class ListaSpotify {
     public static void main(String[] args) {
 
@@ -63,7 +65,6 @@ public class ListaSpotify {
         System.out.println(canciones[(int) (Math.random() * 10) + 1]);
         System.out.println(canciones[(int) (Math.random() * 10) + 1]);
         System.out.println(canciones[(int) (Math.random() * 10) + 1]);
-
 
 
 
