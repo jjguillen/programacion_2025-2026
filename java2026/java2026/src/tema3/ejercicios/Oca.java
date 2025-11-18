@@ -52,6 +52,7 @@ public class Oca {
                     if (jugadores[i]+1 > 63 ) {
                         System.out.println("Te has pasado");
                         jugadores[i] = 63 - (jugadores[i]+1 - 63) - 1;
+                        System.out.println("Jugador " + (i+1) + ": " + (jugadores[i]+1));
                         continue;
 
                     }
@@ -101,9 +102,12 @@ public class Oca {
                             i--;
                             break;
                         }
+                        //Si caes en la última oca, la 59, vas a la 63 y ganas
+                        if (jugadores[i]+1 == 63 ) {
+                            System.out.println("Jugador " + (i+1) + " has ganado");
+                            return;
+                        }
                     }
-
-
 
                 }
 
