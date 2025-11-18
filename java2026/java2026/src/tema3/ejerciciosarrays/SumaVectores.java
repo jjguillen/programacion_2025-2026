@@ -1,4 +1,4 @@
-package tema3.ejercicios;
+package tema3.ejerciciosarrays;
 
 public class SumaVectores {
     public static void main(String[] args) {

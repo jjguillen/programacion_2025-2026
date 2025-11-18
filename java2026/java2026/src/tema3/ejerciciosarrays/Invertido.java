@@ -1,4 +1,4 @@
-package tema3.ejercicios;
+package tema3.ejerciciosarrays;
 
 public class Invertido {
     public static void main(String[] args) {

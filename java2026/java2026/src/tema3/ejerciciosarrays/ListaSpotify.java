@@ -1,6 +1,4 @@
-package tema3.ejercicios;
-
-import java.util.Arrays;
+package tema3.ejerciciosarrays;
 
 public class ListaSpotify {
     public static void main(String[] args) {
