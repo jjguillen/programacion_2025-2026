@@ -1,6 +1,6 @@
 package tema3.ejerciciosmatrices;
 
-public class Ejemplo3 {
+public class Ejemplo3MatrizNoCuadrada {
 
     public static void pintarMatriz(int[][] m) {
         for(int i=0; i < m.length; i++) {
@@ -16,7 +16,7 @@ public class Ejemplo3 {
         //Crea una matriz 5x5 de enteros y rellénala con números aleatorios entre 1 y 100.
         //Luego, calcula la suma de cada fila y cada columna, y muestra los resultados.
 
-        int[][] matriz = new int[5][5];
+        int[][] matriz = new int[3][5];
         for(int i=0; i < matriz.length; i++) {
             for(int j=0; j < matriz[i].length; j++) {
                 matriz[i][j] = (int) (Math.random() * 10);
@@ -25,6 +25,7 @@ public class Ejemplo3 {
 
         pintarMatriz(matriz);
 
+        //Sumar filas
         int sumaFila = 0;
         for(int i=0; i < matriz.length; i++) { //fila
             for(int j=0; j < matriz[i].length; j++) { //columna
@@ -34,13 +35,14 @@ public class Ejemplo3 {
             sumaFila = 0; //Para que calcule la suma de la siguiente fila
         }
 
+        //Sumar columnas
         int sumaColumna = 0;
-        for(int i=0; i < matriz.length; i++) { //fila+
-            for(int j=0; j < matriz[i].length; j++) { //columna
-                sumaColumna += matriz[j][i];
+        for(int j=0; j < matriz[0].length; j++) { //columna
+            for(int i=0; i < matriz.length; i++) { //fila+
+                sumaColumna += matriz[i][j];
             }
-            System.out.println("La suma de la columna " + i + " es: " + sumaColumna );
-            sumaColumna = 0; //Para que calcule la suma de la siguiente fila
+            System.out.println("La suma de la columna " + j + " es: " + sumaColumna );
+            sumaColumna = 0; //Para que calcule la suma de la siguiente columna
         }
 
     }
