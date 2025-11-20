@@ -19,7 +19,6 @@ public class Ejemplo8 {
          * Dime a qué posiciones del tablero se puede mover el rey
          */
 
-        //Ver cómo pintar las filas pares y cómo pintar las filas impares
         char[][] tablero = new char[8][8];
 
         for(int i=0; i < tablero.length; i++) {
@@ -32,5 +31,7 @@ public class Ejemplo8 {
         tablero[reyX][reyY] = 'R';
 
         pintarMatriz(tablero);
+
+
     }
 }
