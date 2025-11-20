@@ -24,7 +24,7 @@ public class Inicio {
         //matriz[i].length -> 5
 
         for(int i=0; i < matriz.length; i++) { //filas
-            for(int j=0; j < matriz[i].length; j++) {
+            for(int j=0; j < matriz[i].length; j++) { //columnas
                 matriz[i][j] = (int) (Math.random() * 100);
             }
         }
