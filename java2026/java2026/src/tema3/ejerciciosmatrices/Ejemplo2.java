@@ -23,6 +23,19 @@ public class Ejemplo2 {
         return maximo;
     }
 
+    public static double minimo(double[][] m) {
+        double minimo = m[0][0];
+        for(int i=0; i < m.length; i++) {
+            for(int j=0; j < m[i].length; j++) {
+                if (m[i][j] < minimo) {
+                    minimo = m[i][j];
+                }
+            }
+        }
+
+        return minimo;
+    }
+
     public static void pintarLinea(double[][] m) {
         for(int i=0; i < m[0].length; i++){
             System.out.print("+");
@@ -62,6 +75,9 @@ public class Ejemplo2 {
         }
 
         pintarMatriz(matriz);
+
+        System.out.println("El mayor es: " + maximo(matriz));
+        System.out.println("El menor es: " + minimo(matriz));
 
     }
 }
