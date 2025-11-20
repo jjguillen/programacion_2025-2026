@@ -1,6 +1,19 @@
 package tema3.ejerciciosmatrices;
 
-public class Ejemplo8 {
+public class Ejemplo8v4 {
+
+    public static void movimientosPieza(char[][] m, int[][] movimientos, int x, int y) {
+        for(int[] movimiento: movimientos) {
+            int nx = x + movimiento[0];
+            int ny = y + movimiento[1];
+
+            //Comprobar que no te sales
+            if(nx >= 0 && nx < m.length && ny >= 0 &&
+                    ny < m[nx].length && m[nx][ny] == '-') {
+                m[nx][ny] = '*';
+            }
+        }
+    }
 
     public static void pintarMatriz(char[][] m) {
         for(int i=0; i < m.length; i++) {
@@ -27,28 +40,12 @@ public class Ejemplo8 {
             }
         }
 
-        int reyX = 0, reyY = 1;
+        int reyX = 3, reyY = 2;
         tablero[reyX][reyY] = 'R';
 
-        pintarMatriz(tablero);
+        int[][] movimientos = { {-1,-1}, {-1,0}, {-1,1}, {0,-1}, {0,1}, {1,-1}, {1,0}, {1,1} };
 
-        //(reyX-1 reyY+1)         x
-        //(reyX-1 reyY)           xR
-        //(reyX-1 reyY-1)         x
-        //(reyX+1 reyY)
-        //(reyX+1 reyY-1)
-        //(reyX+1 reyY+1)
-        //(reyX reyY-1)
-        //(reyX reyY+1)
-
-        tablero[reyX-1][reyY] = '*';
-        tablero[reyX-1][reyY+1] = '*';
-        tablero[reyX-1][reyY-1] = '*';
-        tablero[reyX+1][reyY] = '*';
-        tablero[reyX+1][reyY+1] = '*';
-        tablero[reyX+1][reyY-1] = '*';
-        tablero[reyX][reyY+1] = '*';
-        tablero[reyX][reyY-1] = '*';
+        movimientosPieza(tablero, movimientos, reyX, reyY);
 
         pintarMatriz(tablero);
 

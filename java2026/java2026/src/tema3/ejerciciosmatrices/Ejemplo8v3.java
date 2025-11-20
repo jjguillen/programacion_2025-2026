@@ -1,6 +1,6 @@
 package tema3.ejerciciosmatrices;
 
-public class Ejemplo8 {
+public class Ejemplo8v3 {
 
     public static void pintarMatriz(char[][] m) {
         for(int i=0; i < m.length; i++) {
@@ -27,28 +27,27 @@ public class Ejemplo8 {
             }
         }
 
-        int reyX = 0, reyY = 1;
+        int reyX = 3, reyY = 0;
         tablero[reyX][reyY] = 'R';
 
         pintarMatriz(tablero);
 
-        //(reyX-1 reyY+1)         x
-        //(reyX-1 reyY)           xR
-        //(reyX-1 reyY-1)         x
-        //(reyX+1 reyY)
-        //(reyX+1 reyY-1)
-        //(reyX+1 reyY+1)
-        //(reyX reyY-1)
-        //(reyX reyY+1)
+        //Pieza está en 0,0
+        int[][] movimientos = { {-1,-1}, {-1,0}, {-1,1}, {0,-1}, {0,1}, {1,-1}, {1,0}, {1,1} };
 
-        tablero[reyX-1][reyY] = '*';
-        tablero[reyX-1][reyY+1] = '*';
-        tablero[reyX-1][reyY-1] = '*';
-        tablero[reyX+1][reyY] = '*';
-        tablero[reyX+1][reyY+1] = '*';
-        tablero[reyX+1][reyY-1] = '*';
-        tablero[reyX][reyY+1] = '*';
-        tablero[reyX][reyY-1] = '*';
+        for(int i=0; i < movimientos.length; i++) {
+            int x = reyX + movimientos[i][0];
+            int y = reyY + movimientos[i][1];
+
+            if (x < 0 || x >= tablero.length || y < 0 || y >= tablero[x].length) {
+                System.out.println("Ahí no");
+            } else {
+                tablero[x][y] = '*';
+            }
+
+        }
+
+        System.out.println();
 
         pintarMatriz(tablero);
 

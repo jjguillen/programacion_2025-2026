@@ -1,6 +1,6 @@
 package tema3.ejerciciosmatrices;
 
-public class Ejemplo8 {
+public class Ejemplo8v2 {
 
     public static void pintarMatriz(char[][] m) {
         for(int i=0; i < m.length; i++) {
@@ -27,28 +27,30 @@ public class Ejemplo8 {
             }
         }
 
-        int reyX = 0, reyY = 1;
+        int reyX = 3, reyY = 2;
         tablero[reyX][reyY] = 'R';
 
         pintarMatriz(tablero);
 
-        //(reyX-1 reyY+1)         x
-        //(reyX-1 reyY)           xR
-        //(reyX-1 reyY-1)         x
+        //(reyX-1 reyY)
+        //(reyX-1 reyY-1)
+        //(reyX-1 reyY+1)
         //(reyX+1 reyY)
         //(reyX+1 reyY-1)
         //(reyX+1 reyY+1)
         //(reyX reyY-1)
         //(reyX reyY+1)
 
-        tablero[reyX-1][reyY] = '*';
-        tablero[reyX-1][reyY+1] = '*';
-        tablero[reyX-1][reyY-1] = '*';
-        tablero[reyX+1][reyY] = '*';
-        tablero[reyX+1][reyY+1] = '*';
-        tablero[reyX+1][reyY-1] = '*';
-        tablero[reyX][reyY+1] = '*';
-        tablero[reyX][reyY-1] = '*';
+        for(int i=0; i < tablero.length; i++) {
+            for(int j=0; j < tablero[i].length; j++) {
+                if ( (i==reyX-1 && j==reyY) || (i==reyX-1 && j==reyY-1) ||
+                     (i==reyX-1 && j==reyY+1) || (i==reyX+1 && j==reyY) ||
+                     (i==reyX+1 && j==reyY-1) || (i==reyX+1 && j==reyY+1) ||
+                     (i==reyX && j==reyY+1) || (i==reyX && j==reyY-1) ) {
+                     tablero[i][j] = '*';
+                }
+            }
+        }
 
         pintarMatriz(tablero);
 
