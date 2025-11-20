@@ -1,6 +1,16 @@
 package tema3.ejerciciosmatrices;
 
 public class Ejemplo8 {
+
+    public static void pintarMatriz(char[][] m) {
+        for(int i=0; i < m.length; i++) {
+            for(int j=0; j < m[i].length; j++) {
+                System.out.printf("%2c", m[i][j]);
+            }
+            System.out.println();  // 3.14 //Pinto el salto de línea al terminar la fila
+        }
+    }
+
     public static void main(String[] args) {
 
         /**
@@ -9,6 +19,18 @@ public class Ejemplo8 {
          * Dime a qué posiciones del tablero se puede mover el rey
          */
 
+        //Ver cómo pintar las filas pares y cómo pintar las filas impares
+        char[][] tablero = new char[8][8];
 
+        for(int i=0; i < tablero.length; i++) {
+            for (int j = 0; j < tablero[i].length; j++) {
+                tablero[i][j] = '-';
+            }
+        }
+
+        int reyX = 3, reyY = 2;
+        tablero[reyX][reyY] = 'R';
+
+        pintarMatriz(tablero);
     }
 }
