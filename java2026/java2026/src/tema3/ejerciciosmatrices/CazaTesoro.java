@@ -34,5 +34,23 @@ public class CazaTesoro {
 
     public static void main(String[] args) {
 
+        /**
+         *   Distancia anterior = 10
+         *   Distancia actual = 2
+         *                          Disp. Tesoro
+         *   --*-------    (i,j) -> (0,3) (4,7) -> Distancia = |4-0| + |7-3| = 10
+         *   ----------
+         *   ----*-----
+         *   ----------
+         *   -----*-T--
+         *   ----------
+         *   ----------
+         *   ----------
+         *   ----------
+         *   ----------
+         *
+         */
+
+
     }
 }
