@@ -27,35 +27,26 @@ public class EjemploReina {
             }
         }
 
-        int reinaX = 3, reinaY = 2;
-        tablero[reinaX][reinaY] = 'R';
+        int reinaY = 3, reinaX = 2; //Y es fila, X es columna
+        tablero[reinaY][reinaX] = 'R';
 
         pintarMatriz(tablero);
         System.out.println();
 
-        //Posición es (reinaX, reinaY)
-        //--------
-        //*-------   reinaX-2, reinay-2     (1,0)
-        //-*------   reinaX-1, reinaY-1     (2,1)
-        //--R-----   reinaX+1, reinaY+1     (3,2)
-        //---*----   reinaX+2, reinaY+2     (4,3)
-        //----*---   reinaX+3, reinaY+3     (5,4)
-        //-----*--   reinaX+4, reinaY+4     (6,5)
-        //------*-   reinaX+5, reinaY+5     (7,6)
-
         for(int i=0; i < tablero.length; i++) {
             for(int j=0; j < tablero[i].length; j++) {
                 //Posiciones como torre
-                if ( i == reinaX || j == reinaY) {
+                if ( i == reinaY || j == reinaX) {
                      tablero[i][j] = '*';
                 }
                 //Posiciones como alfil
-                if ( ( i-reinaX == j-reinaY ) || ( i-reinaX == reinaY-j )) {
+                if ( ( i-reinaY == j-reinaX ) || ( i-reinaY == reinaX-j )) {
                     tablero[i][j] = '*';
                 }
             }
         }
 
+        tablero[reinaY][reinaX] = 'R';
         pintarMatriz(tablero);
 
     }
