@@ -24,7 +24,7 @@ public class CazaTesoro {
      * coordenadas x, más el valor absoluto de la resta de las coordenadas
      * y. Donde (x1,y1) es el punto donde está el tesoro, y (x2,y2) es el
      * punto donde tú pruebas.
-     * Distancia= x1 x2 + y1 y2∣ − ∣ ∣ − ∣
+     * Distancia = ∣x1 - x2∣ + ∣y1 - y2∣
      * 6. El jugador debe seguir intentando hasta encontrar el tesoro o agotar sus
      * intentos.
      * 7. Si el jugador encuentra el tesoro, el juego termina y se muestra un mensaje
