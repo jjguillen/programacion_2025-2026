@@ -50,7 +50,7 @@ public class EjemploReina {
                      tablero[i][j] = '*';
                 }
                 //Posiciones como alfil
-                if ( ( i-reinaX == j-reinaY ) ) {
+                if ( ( i-reinaX == j-reinaY ) || ( i-reinaX == reinaY-j )) {
                     tablero[i][j] = '*';
                 }
             }
