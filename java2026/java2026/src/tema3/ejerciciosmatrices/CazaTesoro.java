@@ -88,7 +88,7 @@ public class CazaTesoro {
         tesoroX = (int) (Math.random() * 10);
         tesoroY = (int) (Math.random() * 10);
 
-        tablero[tesoroX][tesoroY] = 'T';
+        //tablero[tesoroX][tesoroY] = 'T';
         pintarMatriz(tablero);
 
         //Bucle hasta agotar turnos
@@ -103,6 +103,7 @@ public class CazaTesoro {
                 disparoY = Integer.parseInt(sc.nextLine());
             } while (disparoY < 0 || disparoY > 9);
 
+            //Pintar disparo en el tablero
             tablero[disparoX][disparoY] = '*';
             pintarMatriz(tablero);
 
@@ -135,6 +136,9 @@ public class CazaTesoro {
         //Si sales del while por agotar los turnos has perdido
         if (turnos == 0) {
             System.out.println("Has perdido");
+            System.out.println("El tesoro se encuentra en (" + tesoroX + "," + tesoroY + ")");
+            tablero[tesoroX][tesoroY] = 'T';
+            pintarMatriz(tablero);
         }
 
     }
