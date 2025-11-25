@@ -41,12 +41,21 @@ public class BufferYBuilder {
         sb.setCharAt(0, 'P'); //sb[0] = 'P'
         System.out.println(sb);
 
-
         //StringBuffer
         StringBuffer sb2 = new StringBuffer("Hola");
         sb2.append(" ");
         sb2.append("Pepe");
         System.out.println(sb2);
+
+        //Pasar de String a StringBuilder
+        String cadena = "Hola"; //Inmutable
+        StringBuilder sb3 = new StringBuilder(cadena); //Mutable
+        sb3.setCharAt(2,'L');
+        System.out.println(sb3);
+
+        //Pasar de StringBuilder a String --> toString
+        String cadenaConvertida = sb3.toString();
+        System.out.println(cadenaConvertida);
 
 
 
