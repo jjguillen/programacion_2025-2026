@@ -97,6 +97,14 @@ public class Cadenas {
             System.out.println(trocitos[i]);
         }
 
+        //Pasar cadena a minúsculas --> cadena.toLowerCase()
+        String cadena5 = "HOLA MUNDO";
+        System.out.println(cadena5.toLowerCase());
+
+        //Pasar cadena a mayúsculas --> cadena.toUpperCase()
+        String cadena6 = "hola mundo";
+        System.out.println(cadena6.toUpperCase());
+
 
 
 
