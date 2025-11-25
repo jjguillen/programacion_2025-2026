@@ -1,5 +1,7 @@
 package tema3.cadenas.ejercicios;
 
+import java.util.Scanner;
+
 public class Ejercicio9 {
     public static void main(String[] args) {
 
@@ -12,6 +14,38 @@ public class Ejercicio9 {
          *
          * replace o replaceAll
          */
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduce una cadena: ");
+        String cadena = sc.nextLine();
+        System.out.println("Introduce una palabra a buscar: ");
+        String palabra = sc.nextLine();
+
+        //Con replace
+        //System.out.println(cadena.replace(palabra, palabra.toUpperCase()));
+
+        //Sin usar replace
+
+        //1. Convertir palabra a mayúsculas
+        //2. Localizar el índice donde está palabra
+        //3. Añadir la palabra en mayúsculas a partir de ahí
+        //4. Añadir el resto de la cadena original
+
+        //1.Convertir palabra a mayúsculas
+        String palabraM = palabra.toUpperCase();
+
+        //2.Localizar el índice donde está palabra
+        int indice = cadena.indexOf(palabra); //Encontrar la primera ocurrencia
+
+        //3.Modify Selected Code…
+        String cadenaFinal = cadena.substring(0, indice);
+        cadenaFinal += palabraM;
+
+        //4.Añadir el resto de la cadena original
+        cadenaFinal += cadena.substring(indice + palabra.length());
+        System.out.println(cadenaFinal);
+
+
 
 
 
