@@ -90,6 +90,13 @@ public class Cadenas {
             System.out.println("No son iguales");
         }
 
+        //Cortar una cadena con una expresión --> cadena.split(expresión)
+        String cadena4 = "192.168.1.250";
+        String[] trocitos = cadena4.split("\\.");
+        for(int i=0; i < trocitos.length; i++) {
+            System.out.println(trocitos[i]);
+        }
+
 
 
 
