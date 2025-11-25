@@ -57,7 +57,7 @@ public class BufferYBuilder {
         String cadenaConvertida = sb3.toString();
         System.out.println(cadenaConvertida);
 
-
+        //deleteCharAt(int index)
 
 
 
