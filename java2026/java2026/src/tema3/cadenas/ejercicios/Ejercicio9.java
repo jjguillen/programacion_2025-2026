@@ -31,23 +31,25 @@ public class Ejercicio9 {
         //3. Añadir la palabra en mayúsculas a partir de ahí
         //4. Añadir el resto de la cadena original
 
-        //1.Convertir palabra a mayúsculas
-        String palabraM = palabra.toUpperCase();
+        //0. Buscar si existe la palabra en la cadena
+        if (!cadena.contains(palabra)) {
+            System.out.println("La palabra no existe en la cadena");
+        } else {
+            //1.Convertir palabra a mayúsculas
+            String palabraM = palabra.toUpperCase();
 
-        //2.Localizar el índice donde está palabra
-        int indice = cadena.indexOf(palabra); //Encontrar la primera ocurrencia
+            //2.Localizar el índice donde está palabra
+            int indice = cadena.indexOf(palabra); //Encontrar la primera ocurrencia
 
-        //3.Modify Selected Code…
-        String cadenaFinal = cadena.substring(0, indice);
-        cadenaFinal += palabraM;
+            //3.Modify Selected Code…
+            String cadenaFinal = cadena.substring(0, indice);
+            cadenaFinal += palabraM;
 
-        //4.Añadir el resto de la cadena original
-        cadenaFinal += cadena.substring(indice + palabra.length());
-        System.out.println(cadenaFinal);
+            //4.Añadir el resto de la cadena original
+            cadenaFinal += cadena.substring(indice + palabra.length());
+            System.out.println(cadenaFinal);
 
-
-
-
+        }
 
     }
 }
