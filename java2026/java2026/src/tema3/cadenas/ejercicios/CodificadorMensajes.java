@@ -27,6 +27,7 @@ public class CodificadorMensajes {
      *       3. En cada palabra sustituyo palabra[i] por palabra[long-1]
      *       4. Unir palabras en una frase separado por espacios
      */
+    /*
     public static String primeraFinal(String texto) {
         String[] palabras = texto.split(" ");
         for(int i=0; i < palabras.length; i++) {
@@ -49,8 +50,10 @@ public class CodificadorMensajes {
         }
         return sb.toString().trim();
     }
+    */
+     */
 
-    public static String primeraFinal2(String texto) {
+    public static String primeraFinal(String texto) {
         String[] palabras = texto.split(" ");
         for(int i=0; i < palabras.length; i++) {
             StringBuffer sbuf = new StringBuffer(palabras[i]);
@@ -121,14 +124,14 @@ public class CodificadorMensajes {
         String textoEnc = texto;
         textoEnc = invertirImpares(textoEnc);
         textoEnc = reemplazoVocales(textoEnc);
-        textoEnc = primeraFinal2(textoEnc);
+        textoEnc = primeraFinal(textoEnc);
         return textoEnc;
     }
 
     public static String encriptar(String texto) {
         String textoEnc = "";
 
-        textoEnc = primeraFinal2(texto);
+        textoEnc = primeraFinal(texto);
         //System.out.println(textoEnc);
         textoEnc = reemplazoVocales(textoEnc);
         //System.out.println(textoEnc);
@@ -148,7 +151,6 @@ public class CodificadorMensajes {
         System.out.println(textoEnc);
         System.out.println("Mensaje desencriptado:");
         System.out.println(desencriptar(encriptar(texto)));
-
 
     }
 }
