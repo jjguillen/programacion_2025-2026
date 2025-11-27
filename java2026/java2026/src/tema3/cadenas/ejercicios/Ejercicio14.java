@@ -33,5 +33,6 @@ public class Ejercicio14 {
 
         String texto = "Esto es un secreto, el examen va a ser complicado";
         System.out.println(encriptar(texto, 3));
+        System.out.println(desencriptar(encriptar(texto, 3), 3));
     }
 }
