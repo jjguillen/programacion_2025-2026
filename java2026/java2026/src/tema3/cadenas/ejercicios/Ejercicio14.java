@@ -19,10 +19,19 @@ public class Ejercicio14 {
     public static String encriptar(String frase, int clave) {
         StringBuffer sb = new StringBuffer();
 
+        for(int i=0; i < frase.length(); i++) {
+            sb.append((char) (frase.charAt(i) + clave));
+        }
         return sb.toString(); //StringBuffer lo convierte a String
+    }
+
+    public static String desencriptar(String frase, int clave) {
+        return encriptar(frase, -clave);
     }
 
     public static void main(String[] args) {
 
+        String texto = "Esto es un secreto, el examen va a ser complicado";
+        System.out.println(encriptar(texto, 3));
     }
 }
