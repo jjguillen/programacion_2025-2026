@@ -51,7 +51,7 @@ public class CodificadorMensajes {
         return sb.toString().trim();
     }
     */
-     */
+
 
     public static String primeraFinal(String texto) {
         String[] palabras = texto.split(" ");
