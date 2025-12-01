@@ -95,6 +95,31 @@ public class Ejercicio1_24_25 {
         return datos;
     }
 
+    public static void ordenarColumnas(int[][] matriz) {
+        //1. Trasponer la matriz, pasar filas a columnas
+        int aux;
+        for(int i=0; i < matriz.length; i++) {
+            for(int j=i+1; j < matriz[i].length; j++) {
+                aux = matriz[i][j];
+                matriz[i][j] = matriz[j][i];
+                matriz[j][i] = aux;
+            }
+        }
+        //2. Ordenar filas de menor a mayor
+        for(int i=0; i < matriz.length; i++) {
+            Arrays.sort(matriz[i]);
+        }
+
+        //3. Trasponer la matriz de nuevo
+        for(int i=0; i < matriz.length; i++) {
+            for(int j=i+1; j < matriz[i].length; j++) { //OJO j=i+1 !!!
+                aux = matriz[i][j];
+                matriz[i][j] = matriz[j][i];
+                matriz[j][i] = aux;
+            }
+        }
+    }
+
     public static void main(String[] args) {
 
         //No olvidar hacer 20x20
