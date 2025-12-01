@@ -123,7 +123,7 @@ public class Ejercicio1_24_25 {
     public static void main(String[] args) {
 
         //No olvidar hacer 20x20
-        int[][] matriz = new int[5][5];
+        int[][] matriz = new int[20][20];
         int opcion = 0;
         int colum1, colum2;
         int fila, resultado;
