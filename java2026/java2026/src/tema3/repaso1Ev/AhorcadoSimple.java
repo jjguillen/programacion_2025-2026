@@ -1,5 +1,6 @@
 package tema3.repaso1Ev;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AhorcadoSimple {
@@ -25,6 +26,30 @@ public class AhorcadoSimple {
         }
     }
 
+    public static boolean buscarLetra(String palabra, char letra) {
+        boolean encontrada = false;
+
+        for(int i=0; i < palabra.length(); i++) {
+            if (palabra.charAt(i) == letra) {
+                encontrada = true;
+                break;
+            }
+        }
+        return encontrada;
+    }
+
+    //Esto aquí no sirve, es de explicar otra cosa
+    public static boolean comprobarGanador(char[] palabraAEncontrar, char[] palabraActual) {
+        boolean iguales = true;
+        for(int i=0; i < palabraAEncontrar.length; i++) {
+            if (palabraAEncontrar[i] != palabraActual[i]) {
+                iguales = false;
+                break;
+            }
+        }
+        return iguales;
+    }
+
     public static void main(String[] args) {
         /**
          * Implementa el juego del ahorcado con una palabra predefinida (ej: "JAVA").
@@ -45,6 +70,7 @@ public class AhorcadoSimple {
         int aleatorio = (int) (Math.random() * palabras.length);
         //System.out.println(palabras[aleatorio]);
         String palabraAdivinar = palabras[aleatorio];
+
         StringBuffer palabraOculta = new StringBuffer(palabraAdivinar.length());
 
         //Llenamos la palabra de guiones
@@ -53,12 +79,12 @@ public class AhorcadoSimple {
         while(intentos > 0) {
             //Pintamos la palabra actual
             pintarPalabraOculta(palabraOculta);
-
             System.out.println("Dime una letra:");
             letra = teclado.next().charAt(0);
 
             //Buscar la letra en la palabra
-            if (palabraAdivinar.indexOf(letra) != -1) {
+            //if (palabraAdivinar.indexOf(letra) != -1) {
+            if (buscarLetra(palabraAdivinar, letra)) {
                 sustituirLetra(palabraOculta, letra, palabraAdivinar);
             } else {
                 //No encontrada
