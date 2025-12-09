@@ -37,7 +37,8 @@ public class Ejercicio1 {
         //2. Invertir palabras
         String[] palabras = sb.toString().split(" ");
         for(int i=0; i < palabras.length; i++) {
-            salida.append(new StringBuffer(palabras[i]).reverse()).append(" ");
+            salida.append(new StringBuffer(palabras[i]).reverse())
+                    .append(" ");
         }
 
         //3. Devolver texto encriptado
