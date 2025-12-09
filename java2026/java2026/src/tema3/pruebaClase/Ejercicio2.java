@@ -22,7 +22,7 @@ public class Ejercicio2 {
     }
 
     public static int[] contarColores(int n) {
-        int[] colores = new int[3];
+        int[] colores = new int[3]; //colores[0] -> rojos, colores[1] -> negros, colores[2] -> verdes
         int tirada = -1;
 
         while(n > 0) {
@@ -56,13 +56,12 @@ public class Ejercicio2 {
             if (tirada == 0) {
                 System.out.println("Verde");
                 break;
-            } else if (tirada % 2 != 0 && (tirada >= 1 && tirada <= 10 || tirada >= 19 && tirada <= 28)
-                || tirada % 2 == 0 && (tirada >= 11 && tirada <= 18 || tirada >= 29 && tirada <= 36) ){
+            } else if ( (tirada % 2 != 0 && (tirada >= 1 && tirada <= 10 || tirada >= 19 && tirada <= 28))
+                || (tirada % 2 == 0 && (tirada >= 11 && tirada <= 18 || tirada >= 29 && tirada <= 36)) ){
                 System.out.println("Rojo");
             } else {
                 System.out.println("Negro");
             }
-
         }
 
         System.out.println("Se hicieron " + contadorTiradas + " hasta salir el 0");
@@ -75,8 +74,8 @@ public class Ejercicio2 {
                            " Verdes: " + colores[2]);
 
         System.out.println();
-        System.out.println("200 Tiradas");
-        colores = contarColores(2000);
+        System.out.println("20000 Tiradas");
+        colores = contarColores(20000);
         System.out.println("Rojos: " + colores[0] + " Negros: " + colores[1] +
                 " Verdes: " + colores[2]);
 

@@ -41,7 +41,7 @@ public class Ejercicio1 {
         }
 
         //3. Devolver texto encriptado
-        return salida.toString();
+        return salida.toString().trim();
     }
 
     public static void main(String[] args) {
