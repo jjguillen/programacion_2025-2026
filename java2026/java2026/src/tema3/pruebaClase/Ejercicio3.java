@@ -47,7 +47,7 @@ public class Ejercicio3 {
     public static void mostrarTablero(char[][] matriz, boolean mostrarBarcos) {
         for(int i=0; i < matriz.length; i++) {
             for(int j=0; j < matriz[i].length; j++) {
-                if (mostrarBarcos && matriz[i][j] == 'B') {
+                if (mostrarBarcos && matriz[i][j] == 'B') { //Ver al principio si me pone los barcos
                     System.out.printf("%2c", matriz[i][j]);
                 } else if (!mostrarBarcos && matriz[i][j] == 'B') {
                     System.out.printf("%2c", '~');
@@ -67,11 +67,12 @@ public class Ejercicio3 {
         do {
             fila = (int)(Math.random()*8);
             columna = (int)(Math.random()*8);
-            direccion = (int)(Math.random()*2);
+            direccion = (int)(Math.random()*2); //0 -> horizontal, 1 -> vertical
 
             if (direccion == 0) { //Horizontal
                 //Comprobar que no se salga del tablero
-                if (columna <= 7 - tamano) {
+                                             // 0 1 2 3 4 5 6 7
+                if (columna <= 8 - tamano) { // - - - - - - - -
                     //Comprobar que no se solapen
                     solapado = false;
                     for (int i = 0; i < tamano; i++) {
@@ -87,11 +88,13 @@ public class Ejercicio3 {
                             tablero[fila][columna + i] = 'B';
                         }
                         break; //Barco colocado
+                    } else {
+                        System.out.println("solapado");
                     }
                 }
             } else {
                 //Comprobar que no se salga del tablero
-                if (fila <= 7-tamano) { //Vertical
+                if (fila <= 8 - tamano) { //Vertical
                     //Comprobar que no se solapen
                     solapado = false;
                     for (int i = 0; i < tamano; i++) {
@@ -106,6 +109,8 @@ public class Ejercicio3 {
                             tablero[fila + i][columna] = 'B';
                         }
                         break; //Barco colocado
+                    } else {
+                        System.out.println("solapado");
                     }
                 }
             }
@@ -134,9 +139,10 @@ public class Ejercicio3 {
 
         inicializarTablero(tablero);
 
+        colocarBarco(tablero, 3);
         colocarBarco(tablero, 2);
-        colocarBarco(tablero, 2);
-        colocarBarco(tablero, 2);
+        colocarBarco(tablero, 3);
+        colocarBarco(tablero, 4);
 
         mostrarTablero(tablero,true);
 
