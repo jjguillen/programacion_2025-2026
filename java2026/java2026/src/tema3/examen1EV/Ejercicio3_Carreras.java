@@ -141,7 +141,8 @@ public class Ejercicio3_Carreras {
             System.out.println("Caballo " + (i + 1) + ": " + nombres[i] + ": "
                     + posiciones[i] + " casillas");
         }
-        System.out.println("--------------------------------------------------------------");
+        System.out.println("--------------------" +
+                "------------------------------------------");
         int[] podio = obtenerPodio(posiciones);
         System.out.println("PODIO");
         for (int i = 0; i < podio.length; i++) {
