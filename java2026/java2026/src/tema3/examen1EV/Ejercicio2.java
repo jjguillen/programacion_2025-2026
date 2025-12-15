@@ -81,7 +81,7 @@ public class Ejercicio2 {
             //Guardamos la tirada para luego ver las consecutivas
             tiradas[i] = tirada;
             //Incrementamos el contador de la cara correspondiente
-            numeroVecesCara[tirada-1]++;
+            numeroVecesCara[tirada-1]++; //3 numeroVecesCara[2]++
             //Acumulamos para luego sacar la media
             acumulador += tirada;
         }

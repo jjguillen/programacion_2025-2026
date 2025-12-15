@@ -16,6 +16,40 @@ public class Ejercicio1 {
         return buffer.toString().trim();
     }
 
+    public static int buscarLetra(char[] letras, char letra) {
+        for(int i = 0; i < letras.length; i++) {
+            if (letras[i] == letra) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public static String crypt(String texto, boolean enc_dec) {
+        char[] letras = {'a','b','c','d','e','f','g','h','i','j','k','l','m',
+                'n','o','p','q','r','s','t','u','v','w','x','y','z',' '};
+        char[] letrasEnc = {'A','c','d','f','E','g','h','j','I','k','l','m','n',
+                'p','O','q','r','s','t','v','U','w','y','x','z','b',' '};
+
+        //Recorrer el texto caracter a caracter
+        //Si encripto busco en el arrays letras la posición y devuelvo en letrasEnc
+        //Si deencripto busco en el arrays letrasEnc la posición y devuelvo en letras
+        int posicion;
+        StringBuffer sb = new StringBuffer();
+        for(int i = 0; i < texto.length(); i++) {
+            if (enc_dec) {
+                posicion = buscarLetra(letras, texto.charAt(i));
+                sb.append(letrasEnc[posicion]);
+            } else {
+                posicion = buscarLetra(letrasEnc, texto.charAt(i));
+                sb.append(letras[posicion]);
+            }
+        }
+
+        return sb.toString();
+    }
+
+
     /**
      * Dada una cadena la encripta:
      * - Cambia todas las consonantes por su siguiente letra en el abecedario (z pasa a b).
@@ -28,6 +62,10 @@ public class Ejercicio1 {
         StringBuilder sb = new StringBuilder(texto);
         StringBuilder salida = new StringBuilder();
         char letra;
+
+        //char[] letras = {'a','b','c','d'};
+        //char[] letrasEnc = {'A','c','d','f'};
+
         for(int i = 0; i < texto.length(); i++) {
             letra = texto.charAt(i);
             //Vocales y consonantes
@@ -94,6 +132,22 @@ public class Ejercicio1 {
         System.out.println(texto);
         System.out.println(encriptar(texto));
         System.out.println(desencriptar(encriptar(texto)));
+
+        System.out.println("---------------- Otra forma de hacerla con dos arrays");
+        //1.Cambiar letras
+        String textoV = crypt(texto, true);
+        //2.Invertir palabras
+        String[] palabras = textoV.split(" ");
+        String invertirPalabras = invertirPalabras(palabras);
+        System.out.println(invertirPalabras);
+
+        //1.Invertir palabras
+        String[] palabras2 = invertirPalabras.split(" ");
+        invertirPalabras = invertirPalabras(palabras2);
+        //2.Cambiar letras
+        textoV = crypt(invertirPalabras, false);
+        System.out.println(textoV);
+
     }
 
 }
