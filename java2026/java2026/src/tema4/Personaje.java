@@ -11,6 +11,7 @@ public class Personaje {
     private Integer mana;
     private Integer damage;
     private Integer nivel;
+    //private Arma armaDerecha;
 
     //Constructor
     public Personaje(String nombre, String clase, Integer mana, Integer damage, Integer nivel) {
