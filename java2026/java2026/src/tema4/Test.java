@@ -21,6 +21,22 @@ public class Test {
          *
          */
 
+        Personaje pers1 = new Personaje("Gandalf", "Mago", 100, 50, 2);
+        Personaje pers2 = new Personaje("Conan", "Guerrero", 0, 60, 4);
+
+        pers1.atacar(pers2);
+        pers2.atacar(pers1);
+
+        System.out.println(pers1);
+        System.out.println(pers2);
+
+        pers1.atacar(pers2);
+        pers2.atacar(pers1);
+
+        //pers2.revivir();
+
+        System.out.println(pers1);
+        System.out.println(pers2);
 
     }
 }
