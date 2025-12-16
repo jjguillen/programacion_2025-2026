@@ -119,7 +119,7 @@ public class Personaje {
      * @param enemigo, personaje enemigo al que se le quita vida
      */
     public void atacar(Personaje enemigo) {
-        enemigo.quitarSalud((int) (this.damage * (1 + this.nivel * 0.15)));
+        enemigo.quitarSalud((int) (this.damage * (1 + this.nivel * 0.015)));
     }
 
     /**
