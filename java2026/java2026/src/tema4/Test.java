@@ -46,6 +46,8 @@ public class Test {
 
         //pers2.revivir();
 
+        pers1.subirNivel();
+
         System.out.println(pers1);
         System.out.println(pers2);
 

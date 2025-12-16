@@ -2,7 +2,8 @@ package tema4;
 
 public class Personaje {
     //Propiedades clase
-    private static final int MAX_SALUD = 100;
+    private static final int MAX_SALUD = 200;
+    private static final int SALUD_INICIAL = MAX_SALUD / 4;
 
     //Propiedades
     private String nombre;
@@ -17,7 +18,7 @@ public class Personaje {
     public Personaje(String nombre, String clase, Integer mana, Integer damage, Integer nivel) {
         this.nombre = nombre;
         this.clase = clase;
-        this.salud = Personaje.MAX_SALUD;
+        this.salud = Personaje.SALUD_INICIAL;
         this.mana = mana;
         this.damage = damage;
         this.nivel = nivel;
@@ -94,7 +95,7 @@ public class Personaje {
     }
 
     public void revivir() {
-        this.salud = Personaje.MAX_SALUD;
+        this.salud = Personaje.SALUD_INICIAL;
     }
 
     public void atacar(Personaje enemigo) {
