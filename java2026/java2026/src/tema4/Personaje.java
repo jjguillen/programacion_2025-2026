@@ -90,16 +90,45 @@ public class Personaje {
     }
 
     //Comportamiento ----------------------------------------------------
+
+    /**
+     * Resta la cantidad de vida a la salud del personaje
+     * Cómo mínimo lo deja con 0 de salud
+     * Si se queda en 0 muestra mensaje de muerte
+     * @param vida, cantidad de vida a restar
+     */
     public void quitarSalud(int vida) {
         this.salud = Math.max(0, this.salud - vida);
+        if (this.salud == 0) {
+            System.out.println("El personaje (" + this.nombre + ") ha muerto :(");
+        }
     }
 
+    /**
+     * Revive al personaje
+     * Le pone la salud a la salud inicial
+     */
     public void revivir() {
         this.salud = Personaje.SALUD_INICIAL;
     }
 
+    /**
+     * Resta vida al Personaje enemigo
+     * La cantidad de vida a quitar es el daño del personaje más un extra
+     * por nivel
+     * @param enemigo, personaje enemigo al que se le quita vida
+     */
     public void atacar(Personaje enemigo) {
-        enemigo.quitarSalud(this.damage);
+        enemigo.quitarSalud((int) (this.damage * (1 + this.nivel * 0.15)));
+    }
+
+    /**
+     * Incrementa en uno el nivel del personaje
+     * Le suma 20 a la salud del personaje, sin pasarnos de MAX_SALUD
+     */
+    public void subirNivel() {
+        this.nivel++;
+        this.salud = Math.min(MAX_SALUD, this.salud + 20);
     }
 
 }
