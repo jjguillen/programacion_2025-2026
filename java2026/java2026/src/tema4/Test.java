@@ -19,6 +19,17 @@ public class Test {
          * 9. Quítale vida a uno de ellos, dejar uno sin vida, revivirlo
          * 10. Pinta los dos personajes
          *
+         * Extra:
+         * - Cuando el personaje ataque que quite vida en función del nivel
+         * Por ejemplo: damage * (1 + nivel * 0.15)
+         * Ojo, hay que pasar double a integer
+         * - Cuando la vida de un personaje llegue a 0, mostrar mensaje de muerto
+         * - Subir nivel:
+         *   a) Cambiamos MAX_SALUD a 200
+         *   b) Al crear un personaje le ponemos de vida MAX_SALUD / 4
+         *   c) Hacemos un método void subirNivel() que le sume uno al nivel
+         *   y sumo 20 de salud al personaje, sin exceder MAX_SALUD
+         *
          */
 
         Personaje pers1 = new Personaje("Gandalf", "Mago", 100, 50, 2);
