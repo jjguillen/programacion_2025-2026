@@ -51,5 +51,7 @@ public class Test {
         System.out.println(pers1);
         System.out.println(pers2);
 
+        //pers1 = null;
+
     }
 }
