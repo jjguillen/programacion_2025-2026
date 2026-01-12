@@ -18,5 +18,9 @@ public class TestEmpresa {
 
         System.out.println(cosentino);
 
+        cosentino.removeEmpleado(emp1);
+
+        System.out.println(cosentino);
+
     }
 }

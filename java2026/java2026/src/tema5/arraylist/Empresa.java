@@ -1,5 +1,6 @@
 package tema5.arraylist;
 
+
 import java.util.ArrayList;
 
 public class Empresa {
