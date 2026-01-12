@@ -51,7 +51,10 @@ public class Empresa {
     public String toString() {
         final StringBuffer sb = new StringBuffer("Empresa{");
         sb.append("nombre='").append(nombre).append('\'');
-        sb.append(", empleados=").append(empleados);
+        sb.append(", empleados=").append('\n');
+        //Generar un string para los objetos del ArrayList separados por un salto
+        for(Empleado empleado : empleados)
+            sb.append(empleado).append('\n');
         sb.append('}');
         return sb.toString();
     }
