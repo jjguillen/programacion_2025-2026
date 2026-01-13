@@ -1,4 +1,4 @@
-package tema5.ejercicios;
+package tema5.ejercicios.ejercicioclase;
 
 import java.util.ArrayList;
 

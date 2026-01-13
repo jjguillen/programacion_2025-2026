@@ -1,4 +1,4 @@
-package tema5.ejercicios;
+package tema5.ejercicios.ejercicioclase;
 
 public class Test {
     public static void main(String[] args) {
@@ -8,9 +8,6 @@ public class Test {
         //3. Recorre la lista con un for y pinta cada canción su título y autor solo
         //4. Pide por teclado un título y un autor
         //5. Elimina la canción de la lista con ese título y ese autor
-
-
-
 
 
     }
