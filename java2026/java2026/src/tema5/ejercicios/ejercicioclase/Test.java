@@ -1,5 +1,7 @@
 package tema5.ejercicios.ejercicioclase;
 
+import java.util.Scanner;
+
 public class Test {
     public static void main(String[] args) {
 
@@ -8,6 +10,29 @@ public class Test {
         //3. Recorre la lista con un for y pinta cada canción su título y autor solo
         //4. Pide por teclado un título y un autor
         //5. Elimina la canción de la lista con ese título y ese autor
+
+        //Hacer dos listas mediante constructor copia,
+        //eliminar una canción de una lista, y ver qué pasa en la otra lista
+
+        Scanner sc = new Scanner(System.in);
+
+        ListaSpotify l1 = new ListaSpotify("Lista programar");
+        l1.addCancion(new Cancion("Black in black", "AC/DC",200));
+        l1.addCancion(new Cancion("Killing in the name", "Rage against the machine", 300));
+        l1.addCancion(new Cancion("Enter Sandman", "Metallica", 400));
+
+        for(Cancion c: l1.getCanciones()) {
+            System.out.println(c.getTitulo() + " - " + c.getArtista());
+        }
+
+        System.out.println("Dime título");
+        String titulo = sc.nextLine();
+        System.out.println("Dime artista");
+        String artista = sc.nextLine();
+
+        l1.removeCancion(new Cancion(titulo, artista, 0));
+
+        System.out.println(l1);
 
 
     }
