@@ -1,11 +1,11 @@
-package tema5.arraylist;
+package tema5.constructorcopia;
 
 /**
  * Clase POJO: Plain Old Java Object
  */
 public class Empleado {
 
-    public enum Departamento {
+    enum Departamento {
         TI,
         Marketing,
         Finanzas,
@@ -20,6 +20,7 @@ public class Empleado {
     private String telefono;
     private Departamento departamento;
 
+    //Constructor parametrizado
     public Empleado(String nombre, String apellidos, Integer edad, Double salario, String email, String telefono, Departamento departamento) {
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -28,6 +29,17 @@ public class Empleado {
         this.email = email;
         this.telefono = telefono;
         this.departamento = departamento;
+    }
+
+    //Constructor copia
+    public Empleado(Empleado empleado) {
+        this.nombre = empleado.nombre;
+        this.apellidos = empleado.apellidos;
+        this.edad = empleado.edad;
+        this.salario = empleado.salario;
+        this.email = empleado.email;
+        this.telefono = empleado.telefono;
+        this.departamento = empleado.departamento;
     }
 
     public String getNombre() {
