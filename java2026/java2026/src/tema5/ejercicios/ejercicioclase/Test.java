@@ -34,6 +34,10 @@ public class Test {
 
         System.out.println(l1);
 
+        ListaSpotify l2 = new ListaSpotify(l1);
+        l2.removeCancion(new Cancion("Killing in the name", "Rage against the machine", 300));
+
+        System.out.println(l1);
 
     }
 }
