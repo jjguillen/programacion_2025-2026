@@ -34,10 +34,13 @@ public class Test {
 
         System.out.println(l1);
 
+        //Crear una lista nueva con el constructor copia
         ListaSpotify l2 = new ListaSpotify(l1);
         l2.removeCancion(new Cancion("Killing in the name", "Rage against the machine", 300));
 
         System.out.println(l1);
+        System.out.println("---------");
+        System.out.println(l2);
 
     }
 }

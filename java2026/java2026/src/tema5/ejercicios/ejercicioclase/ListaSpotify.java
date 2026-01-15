@@ -1,7 +1,7 @@
 package tema5.ejercicios.ejercicioclase;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Objects;
 
 public class ListaSpotify {
 
@@ -17,13 +17,19 @@ public class ListaSpotify {
 
     public ListaSpotify(String nombre) {
         this.nombre = nombre;
-        this.canciones = new ArrayList<>();
+        this.canciones = new ArrayList<>(); //Crear lista vacía
     }
 
+    /**
+     * Constructor copia
+     * @param otraLista
+     * Cuando queramos copiar un ArrayList hay que crear uno nuevo
+     * this.canciones = new ArrayList<>(otraLista.canciones);
+     */
     public ListaSpotify(ListaSpotify otraLista) {
         this.nombre = otraLista.nombre;
-        this.canciones = otraLista.canciones;
-        //this.canciones = new ArrayList<>(otraLista.canciones);
+        //this.canciones = otraLista.canciones; // Mal -> comparten el mismo objeto ArrayList
+        this.canciones = new ArrayList<>(otraLista.canciones); //Crea una nueva lista con los valores de la otra
     }
 
     public String getNombre() {
@@ -47,6 +53,18 @@ public class ListaSpotify {
             sb.append(c).append('\n');
         sb.append('}');
         return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        ListaSpotify that = (ListaSpotify) o;
+        return Objects.equals(nombre, that.nombre);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(nombre);
     }
 
     public void addCancion(Cancion c){
