@@ -22,7 +22,7 @@ public class TiendaAlquilerVideojuego {
 
     public Integer getNumeroVideojuegos() {
         return videojuegos.size();
-    }
+    } //size() -> tamaño del ArrayList
 
     public void mostrarVideojuegos() {
         System.out.println(nombre);
@@ -32,6 +32,12 @@ public class TiendaAlquilerVideojuego {
     }
 
     public boolean alquilarJuego(String titulo, String plataforma) {
+        //Buscar el juego en la tienda
+        for(Videojuego v: this.videojuegos) {
+            if (v.titulo.equals(titulo) && v.plataforma.equals(plataforma)) {
+                return v.alquilar();
+            }
+        }
 
         return false;
     }
