@@ -39,6 +39,14 @@ public class Videojuego {
     //    - Si el juego ha sido alquilado más de 20 veces, le sumamos 1€ al precio base de alquiler y devolvemos ese valor
     //    - Si el juego ha sido alquilado más de 100 veces, le sumamos 2€ al precio base del alquiler y devolvemos ese valor
 
+    //Test:
+    // 1. Crear 4 juegos
+    // 2. Pintar los juegos
+    // 3. Alquilar uno 3 veces (hay que devolverlo tras cada alquiler)
+    // y pintar su precio de alquiler en cada alquiler
+    // 4. Cambiar precio de alquiler a 6€
+    // 5. Alquilar un juego 22 veces (hay que devolverlo tras cada alquiler)
+    // y pintar su precio de alquiler en cada alquiler
 
 
 
