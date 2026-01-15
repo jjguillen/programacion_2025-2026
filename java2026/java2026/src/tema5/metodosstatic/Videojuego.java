@@ -18,12 +18,12 @@ public class Videojuego {
     public static Double precioAlquiler = 5.0; //getter y setter
     public static Integer totalJuegosPrestados = 0; //getter
 
-    public String codigo;
-    public String titulo;
-    public String plataforma;
-    public CategoriaVideojuego categoria;
-    public boolean disponible;
-    public Integer vecesAlquilado;
+    private String codigo;
+    private String titulo;
+    private String plataforma;
+    private CategoriaVideojuego categoria;
+    private boolean disponible;
+    private Integer vecesAlquilado;
 
     //Constructor con titulo, plantaforma y categoria, lo demás lo ponéis vosotros
     public Videojuego(String titulo, String plataforma, CategoriaVideojuego categoria) {
