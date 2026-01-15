@@ -22,16 +22,16 @@ public class CuentaBancaria {
         this.titular = titular;
     }
 
-    public CuentaBancaria(String idCuenta, String titular) {
+    public CuentaBancaria(String titular) {
         CuentaBancaria.totalCuentas++;
-        this.idCuenta = idCuenta;
+        this.idCuenta = CuentaBancaria.generarNumeroCuenta();
         this.titular = titular;
         this.saldo = 0.0;
     }
 
     public CuentaBancaria(CuentaBancaria otra) {
         CuentaBancaria.totalCuentas++;
-        this.idCuenta = otra.idCuenta;
+        this.idCuenta = CuentaBancaria.generarNumeroCuenta(); //BCA-00000<num>
         this.saldo = otra.saldo;
         this.titular = otra.titular;
     }
@@ -93,8 +93,55 @@ public class CuentaBancaria {
                 + String.format("%06d", CuentaBancaria.totalCuentas);
     }
 
-    //MÉTODOS NO STATIC
+    public static Integer getTotalCuentas() {
+        return CuentaBancaria.totalCuentas;
+    }
 
+    public static Double getTasaInteres() {
+        return CuentaBancaria.tasaInteres;
+    }
+
+    public static void setTasaInteres(Double tasaInteres) {
+        CuentaBancaria.tasaInteres = tasaInteres;
+    }
+
+    //MÉTODOS NO STATIC
+    /**
+     * Incrementa el saldo de la cuenta, si la cantidad es positiva
+     * @param cantidad
+     * @return true si la cantidad es positiva, false en caso contrario
+     */
+    public boolean depositar(Double cantidad){
+        if (cantidad > 0) {
+            this.saldo += cantidad;
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Decrementa el saldo en la cantidad indicada, si la cantidad es positiva y hay saldo suficiente
+     * @param cantidad
+     * @return true si se puede retirar, false en caso contrario
+     */
+    public boolean retirar(Double cantidad){
+        if (cantidad <= this.saldo && cantidad > 0) {
+            this.saldo -= cantidad;
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Calcula el beneficio de la cuenta en función del saldo y el tipo de interés remunerado
+     * que el banco ofrece a TODAS las cuentas
+     * @return
+     */
+    public Double calcularBeneficio() {
+        return this.saldo * CuentaBancaria.tasaInteres;
+    }
 
 
 
