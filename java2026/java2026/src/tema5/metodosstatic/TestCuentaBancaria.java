@@ -1,6 +1,6 @@
 package tema5.metodosstatic;
 
-public class Test {
+public class TestCuentaBancaria {
     public static void main(String[] args) {
 
         CuentaBancaria cc1 = new CuentaBancaria(100000.0, "Daniel Sánchez");
