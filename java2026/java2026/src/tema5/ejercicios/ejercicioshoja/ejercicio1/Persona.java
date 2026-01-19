@@ -5,6 +5,12 @@ import java.util.Objects;
 
 public class Persona {
 
+    static {
+        //Comprobación de red, conexión a bbdd, ...
+        //Se ejecuta una única vez la primera vez que se invoca la clase
+        System.out.println("Clase Persona cargada");
+    }
+
     enum SexoPersona { H, M, O }
 
     private String nombre;
@@ -33,6 +39,7 @@ public class Persona {
     }
 
     public Persona(String nombre, Integer edad, String dni, SexoPersona sexo, Double peso, Double altura) {
+        System.out.println("Creando persona ...");
         this.nombre = nombre;
         this.edad = edad;
         this.dni = dni;
@@ -42,6 +49,7 @@ public class Persona {
     }
 
     public Persona(Persona otra) {
+        System.out.println("Creando persona ...");
         this.nombre = otra.nombre;
         this.edad = otra.edad;
         this.dni = otra.dni;
