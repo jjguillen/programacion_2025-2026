@@ -13,14 +13,16 @@ public class Expediente {
     private final Integer id = (++totalAlumnado + 10000);
     private String nombre;
     private String apellidos;
+    private Modalidad modalidad;
     private Sexo sexo;
     private LocalDate fechaNacimiento;
     private Integer curso;
     private ArrayList<NotasCurso> calificaciones;
 
-    public Expediente(String nombre, String apellidos, Sexo sexo, LocalDate fechaNacimiento, Integer curso) {
+    public Expediente(String nombre, String apellidos, Modalidad modalidad, Sexo sexo, LocalDate fechaNacimiento, Integer curso) {
         this.nombre = nombre;
         this.apellidos = apellidos;
+        this.modalidad = modalidad;
         this.sexo = sexo;
         this.fechaNacimiento = fechaNacimiento;
         this.curso = curso;
@@ -37,6 +39,10 @@ public class Expediente {
 
     public String getApellidos() {
         return apellidos;
+    }
+
+    public Modalidad getModalidad() {
+        return modalidad;
     }
 
     public Sexo getSexo() {
@@ -63,6 +69,10 @@ public class Expediente {
         this.apellidos = apellidos;
     }
 
+    public void setModalidad(Modalidad modalidad) {
+        this.modalidad = modalidad;
+    }
+
     public void setSexo(Sexo sexo) {
         this.sexo = sexo;
     }
@@ -81,6 +91,7 @@ public class Expediente {
         sb.append("id=").append(id);
         sb.append(", nombre='").append(nombre).append('\'');
         sb.append(", apellidos='").append(apellidos).append('\'');
+        sb.append(", modalidad='").append(modalidad).append('\'');
         sb.append(", sexo=").append(sexo);
         sb.append(", fechaNacimiento=").append(fechaNacimiento);
         sb.append(", curso=").append(curso);
@@ -109,8 +120,41 @@ public class Expediente {
         return Period.between(fechaNacimiento,LocalDate.now()).getYears();
     }
 
+    public boolean esMayorDeEdad() {
+        return getEdad() >= 18;
+    }
 
+    public boolean titula() {
+        //    Cursa FPB y ha suspendido 2 asignaturas.​
+        //    En el resto de modalidades tiene que tenerlas todas aprobadas.
+        if (this.getModalidad().equals(Modalidad.FPB)) {
+            return (this.getNumeroSuspensos() <= 2);
+        } else {
+            return (this.getNumeroSuspensos() == 0);
+        }
+    }
 
+    public Integer getNumeroSuspensos() {
+        int contador=0;
+        for(NotasCurso nc : calificaciones) {
+            if (nc.getNotaFinal() < 5)
+                contador++;
+        }
+
+        return contador;
+    }
+
+    /**
+     * Devuelve la media de las calificaciones (notaFinal) de un alumno
+     * @return
+     */
+    public Double mediaExpediente() {
+        Double suma=0.0;
+        for(NotasCurso nc : calificaciones) {
+            suma+=nc.getNotaFinal();
+        }
+        return suma/calificaciones.size();
+    }
 
 
 
