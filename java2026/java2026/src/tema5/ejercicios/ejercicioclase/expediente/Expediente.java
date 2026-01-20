@@ -115,15 +115,30 @@ public class Expediente {
     }
 
     //----------------------------------------------------------
+
+    /**
+     * Devuelve la edad de un alumno calculada a partir de la fecha de nacimiento
+     * @return
+     */
     public Integer getEdad() {
         //return LocalDate.now().getYear() - fechaNacimiento.getYear();
         return Period.between(fechaNacimiento,LocalDate.now()).getYears();
     }
 
+    /**
+     * Devuelve true si el alumno es mayor de edad (>=18) y false si no
+     * @return
+     */
     public boolean esMayorDeEdad() {
         return getEdad() >= 18;
     }
 
+    /**
+     * Devuelve true si el alumno titula y false si no
+     * En FPB titula con 2 o menos suspensas
+     * En GMEDIO y GSUPERIOR titula si las tiene todas aprobadas
+     * @return
+     */
     public boolean titula() {
         //    Cursa FPB y ha suspendido 2 asignaturas.​
         //    En el resto de modalidades tiene que tenerlas todas aprobadas.
@@ -134,6 +149,10 @@ public class Expediente {
         }
     }
 
+    /**
+     * Calcula el número de suspensos de un alumno, viendo cuantas nota final son menores a 5
+     * @return
+     */
     public Integer getNumeroSuspensos() {
         int contador=0;
         for(NotasCurso nc : calificaciones) {
