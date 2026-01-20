@@ -9,7 +9,7 @@ public class Test {
                 Sexo.HOMBRE, LocalDate.of(2000, 10, 5), 1);
 
         ex1.addCalificacion(new NotasCurso("Programación",1, 5.0, 6.0, 5.5));
-        ex1.addCalificacion(new NotasCurso("BBDD",1, 3.0, 4.5, 5.0));
+        ex1.addCalificacion(new NotasCurso("BBDD",1, 5.0, 4.5, 5.9));
         ex1.addCalificacion(new NotasCurso("SSII",1, 7.0, 8.0, 9.5));
 
         System.out.println(ex1);
