@@ -116,6 +116,14 @@ public class Expediente {
 
     //----------------------------------------------------------
 
+    public void addCalificacion(NotasCurso nc) {
+        calificaciones.add(nc);
+    }
+
+    public void removeCalificacion(NotasCurso nc) {
+        calificaciones.remove(nc);
+    }
+
     /**
      * Devuelve la edad de un alumno calculada a partir de la fecha de nacimiento
      * @return
