@@ -10,7 +10,7 @@ import java.time.LocalDate;
 public abstract class TareaBase implements Tarea {
 
     //Contador de tareas, común a todas las instancias
-    private static Integer contadorId = 0;
+    private static Integer contadorId = 1;
 
     protected Integer id;
     protected String titulo;

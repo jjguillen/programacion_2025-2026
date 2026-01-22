@@ -10,7 +10,8 @@ public class TareaProgramada extends TareaBase {
     private LocalTime horaProgramada;
 
     public TareaProgramada(String titulo, String descripcion,
-                           PrioridadTarea prioridad, LocalDate fechaProgramada, LocalTime horaProgramada) {
+                           PrioridadTarea prioridad, LocalDate fechaProgramada,
+                           LocalTime horaProgramada) {
         super(titulo, descripcion, prioridad);
         this.fechaProgramada = fechaProgramada;
         this.horaProgramada = horaProgramada;
