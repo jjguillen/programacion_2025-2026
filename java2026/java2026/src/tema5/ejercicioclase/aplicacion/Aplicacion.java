@@ -1,8 +1,10 @@
 package tema5.ejercicioclase.aplicacion;
 
+import tema5.ejercicioclase.modelos.EstadoTarea;
 import tema5.ejercicioclase.modelos.PrioridadTarea;
 import tema5.ejercicioclase.modelos.TareaProgramada;
 import tema5.ejercicioclase.modelos.TareaUrgente;
+import tema5.ejercicioclase.servicios.GestorTareas;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -26,6 +28,15 @@ public class Aplicacion {
 
         tp1.mostrarDetalle();
         IO.println(tp1.obtenerDiasSemana());
+
+        GestorTareas gt = new GestorTareas("Manolo Días");
+        gt.agregarTarea(tu1);
+        gt.agregarTarea(tp1);
+
+        gt.listarTareas();
+
+        IO.println("Tareas completadas: ");
+        IO.println(gt.getTareasPorEstado(EstadoTarea.COMPLETADA));
 
 
 

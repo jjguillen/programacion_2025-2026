@@ -102,6 +102,20 @@ public class GestorTareas {
         return getTareasPorEstado(EstadoTarea.PENDIENTE);
     }
 
+    public void listarTareas() {
+        IO.println("Tareas del usuario " + nombreUsuario);
+        for(Tarea tarea : tareas) {
+            IO.println(tarea);
+        }
+    }
+
+    public void listarTareasPendientes() {
+        IO.println("Tareas pendientes del usuario " + nombreUsuario);
+        for(Tarea tarea : getTareasPendientes()) {
+            IO.println(tarea);
+        }
+    }
+
 
 
 
