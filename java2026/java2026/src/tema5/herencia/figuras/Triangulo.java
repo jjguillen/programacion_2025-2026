@@ -49,4 +49,6 @@ public class Triangulo extends Figura2D {
     public Double calcularPerimetro() {
         return base * 3;
     }
+
+
 }

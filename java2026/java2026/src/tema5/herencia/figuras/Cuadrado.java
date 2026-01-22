@@ -1,6 +1,7 @@
 package tema5.herencia.figuras;
 
-public class Cuadrado extends Figura2D {
+//final significa que no se puede heredar de esta clase
+public final class Cuadrado extends Figura2D {
 
     private Double lado;
 

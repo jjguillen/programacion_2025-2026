@@ -60,7 +60,8 @@ public abstract class Figura {
     }
 
     //----------------------------------------------
-    public void dibujar(){
+    //Como es final, las clases hijas no pueden sobreescribirlo
+    public final void dibujar(){
         System.out.println("Dibujando figura...");
     }
 
