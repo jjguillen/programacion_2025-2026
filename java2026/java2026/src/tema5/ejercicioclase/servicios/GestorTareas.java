@@ -1,6 +1,7 @@
 package tema5.ejercicioclase.servicios;
 
 import tema5.ejercicioclase.modelos.Tarea;
+import tema5.ejercicioclase.modelos.TareaBase;
 
 import java.util.ArrayList;
 
@@ -26,7 +27,15 @@ public class GestorTareas {
         tareas.remove(tarea);
     }
 
-
+    public Tarea buscarTarea(int id) {
+        for(Tarea tarea : tareas) {
+            // Casting para pasar de tarea (interfaz Tarea) a TareaBase y poder llamar a getId
+            if ( ((TareaBase) tarea).getId().equals(id) ) {
+                return tarea;
+            }
+        }
+        return null;
+    }
 
 
 
