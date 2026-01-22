@@ -51,15 +51,14 @@ public class TareaUrgente extends TareaBase {
         */
 
         //Si la fechaCreación + plazoHoras < fechaHoraActual
-
-        //Sacamos la fecha y hora actual
+        //1. Sacamos la fecha y hora actual
         LocalDateTime fechaActual = LocalDateTime.now();
 
-        //Convertimos la fecha de creación a LocalDateTime
+        //2. Convertimos la fecha de creación a LocalDateTime
         LocalDateTime fechaCreacionLDT = fechaCreacion.atTime(0,0);
         fechaCreacionLDT = fechaCreacionLDT.plusHours(plazoHoras);
 
-        //Comparamos las dos fechas
+        //3. Comparamos las dos fechas
         return fechaActual.isAfter(fechaCreacionLDT);
 
     }
