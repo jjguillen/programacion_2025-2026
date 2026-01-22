@@ -2,7 +2,7 @@ package tema5.herencia.figuras;
 
 import java.util.Objects;
 
-public class Figura {
+public abstract class Figura {
     protected String nombre;
     protected Double grosor;
     protected String color;
@@ -63,7 +63,5 @@ public class Figura {
     public void dibujar(){
         System.out.println("Dibujando figura...");
     }
-
-
 
 }

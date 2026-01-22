@@ -17,6 +17,5 @@ public class Test {
         System.out.println("Área: " + f2.calcularArea() );
         System.out.println("Perímetro: " + f2.calcularPerimetro());
 
-
     }
 }
