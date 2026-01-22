@@ -19,6 +19,6 @@ public class TareaUrgente extends TareaBase {
 
     @Override
     public String getTipo() {
-        return "";
+        return "URGENTE";
     }
 }
