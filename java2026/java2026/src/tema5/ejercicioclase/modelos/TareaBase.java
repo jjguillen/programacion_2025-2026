@@ -12,13 +12,13 @@ public abstract class TareaBase implements Tarea {
     //Contador de tareas, común a todas las instancias
     private static Integer contadorId = 0;
 
-    private Integer id;
-    private String titulo;
-    private String descripcion;
-    private PrioridadTarea prioridad;
-    private EstadoTarea estado;
-    private LocalDate fechaCreacion;
-    private LocalDate fechaCompletada;
+    protected Integer id;
+    protected String titulo;
+    protected String descripcion;
+    protected PrioridadTarea prioridad;
+    protected EstadoTarea estado;
+    protected LocalDate fechaCreacion;
+    protected LocalDate fechaCompletada;
 
     public TareaBase(String titulo, String descripcion, PrioridadTarea prioridad) {
         this.id = TareaBase.contadorId++;
@@ -85,7 +85,6 @@ public abstract class TareaBase implements Tarea {
     }
 
     //------- MÉTODOS ----------------------------------------------------------
-
     /**
      * Cambia el estado de la tarea a COMPLETADA
      * Y pone la fecha del momento en fechaCompletada
@@ -112,6 +111,5 @@ public abstract class TareaBase implements Tarea {
         //llamando a toString, luego pinta ese String
         IO.println(this);
     }
-
 
 }
