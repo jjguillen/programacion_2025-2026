@@ -9,6 +9,7 @@ import java.time.LocalDate;
  */
 public abstract class TareaBase {
 
+    //Contador de tareas, común a todas las instancias
     private static Integer contadorId = 0;
 
     private Integer id;
@@ -20,10 +21,15 @@ public abstract class TareaBase {
     private LocalDate fechaCompletada;
 
     public TareaBase(String titulo, String descripcion, PrioridadTarea prioridad) {
+        this.id = TareaBase.contadorId++;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.prioridad = prioridad;
+        this.estado = EstadoTarea.PENDIENTE;
+        this.fechaCreacion = LocalDate.now(); //Fecha en el momento de la ejecución
+        this.fechaCompletada = null;
     }
+
 
 
 
