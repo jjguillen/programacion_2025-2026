@@ -35,6 +35,22 @@ public abstract class TareaBase {
 
 
 
+    //------- MÉTODOS ----------------------------------------------------------
+
+    /**
+     * Cambia el estado de la tarea a COMPLETADA
+     * Y pone la fecha del momento en fechaCompletada
+     */
+    public void ejecutar() {
+        this.estado = EstadoTarea.COMPLETADA;
+        this.fechaCompletada = LocalDate.now();
+    }
+
+
+
+
+
+
 
 
 
