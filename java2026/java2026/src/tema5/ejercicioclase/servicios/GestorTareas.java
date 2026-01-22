@@ -1,5 +1,6 @@
 package tema5.ejercicioclase.servicios;
 
+import tema5.ejercicioclase.modelos.EstadoTarea;
 import tema5.ejercicioclase.modelos.Tarea;
 import tema5.ejercicioclase.modelos.TareaBase;
 
@@ -19,6 +20,12 @@ public class GestorTareas {
         return nombreUsuario;
     }
 
+    public ArrayList<Tarea> getTareas() {
+        return tareas;
+    }
+
+
+    //Métodos básicos -------------------------------------------------------
     public void agregarTarea(Tarea nuevaTarea) {
         tareas.add(nuevaTarea);
     }
@@ -36,6 +43,25 @@ public class GestorTareas {
         }
         return null;
     }
+
+    //Métodos de filtrado -------------------------------------------------------------
+
+    /**
+     * Devolver una lista con todas las tareas con un estado determinado
+     * @param estado de la tarea
+     * @return ArrayList<Tarea>
+     */
+    public ArrayList<Tarea> buscarTareasPorEstado(EstadoTarea estado) {
+        ArrayList<Tarea> lista = new ArrayList<>();
+        for(Tarea tarea : tareas) {
+            if ( tarea.getEstado().equals(estado) ) {
+                //Añadir a la nueva lista si la tarea tiene el estado deseado
+                lista.add(tarea);
+            }
+        }
+        return lista;
+    }
+
 
 
 
