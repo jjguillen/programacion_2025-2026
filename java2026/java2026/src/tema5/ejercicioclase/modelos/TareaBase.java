@@ -7,7 +7,7 @@ import java.time.LocalDate;
  * Va a ser el padre de una herencia --> TareaUrgente y TareaProgramada serán sus hijas
  * Implementa interfaz tarea
  */
-public abstract class TareaBase {
+public abstract class TareaBase implements Tarea {
 
     //Contador de tareas, común a todas las instancias
     private static Integer contadorId = 0;
@@ -30,10 +30,59 @@ public abstract class TareaBase {
         this.fechaCompletada = null;
     }
 
+    public Integer getId() {
+        return id;
+    }
 
+    public String getTitulo() {
+        return titulo;
+    }
 
+    public String getDescripcion() {
+        return descripcion;
+    }
 
+    public PrioridadTarea getPrioridad() {
+        return prioridad;
+    }
 
+    public EstadoTarea getEstado() {
+        return estado;
+    }
+
+    public LocalDate getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public LocalDate getFechaCompletada() {
+        return fechaCompletada;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public void setPrioridad(PrioridadTarea prioridad) {
+        this.prioridad = prioridad;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("TareaBase{");
+        sb.append("id=").append(id);
+        sb.append(", titulo='").append(titulo).append('\'');
+        sb.append(", descripcion='").append(descripcion).append('\'');
+        sb.append(", prioridad=").append(prioridad);
+        sb.append(", estado=").append(estado);
+        sb.append(", fechaCreacion=").append(fechaCreacion);
+        sb.append(", fechaCompletada=").append(fechaCompletada);
+        sb.append('}');
+        return sb.toString();
+    }
 
     //------- MÉTODOS ----------------------------------------------------------
 
@@ -46,14 +95,23 @@ public abstract class TareaBase {
         this.fechaCompletada = LocalDate.now();
     }
 
+    /**
+     * Modifica el estado de la tarea
+     * @param estado nuevo de la tarea
+     */
+    public void cambiarEstado(EstadoTarea estado) {
+        this.estado = estado;
+    }
 
+    @Override
+    public abstract String getTipo();
 
-
-
-
-
-
-
+    @Override
+    public void mostrarDetalle() {
+        //Coge el objeto y lo convierte automáticamente a String
+        //llamando a toString, luego pinta ese String
+        IO.println(this);
+    }
 
 
 }
