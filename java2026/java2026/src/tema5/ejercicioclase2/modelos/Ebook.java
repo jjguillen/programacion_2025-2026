@@ -54,6 +54,6 @@ public class Ebook extends ContenidoDigital {
 
     @Override
     public void reproducir() {
-        IO.println("Playing ebook ... " + this.title + " by " + this.numPages);
+        IO.println("Playing ebook ... " + this.title + " with " + this.numPages + " pages");
     }
 }
