@@ -27,6 +27,12 @@ public class App {
             IO.println(lb);
             IO.println(lb.getTipo());
             //lb.reproducir();
+
+            //Preguntar de qué clase es el objeto en concreto
+            //Mucha gente dice que eso rompe la POO
+            if (lb instanceof ContenidoDigital) {
+                ((ContenidoDigital) lb).reproducir();
+            }
         }
 
     }
