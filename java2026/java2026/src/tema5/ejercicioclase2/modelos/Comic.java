@@ -46,7 +46,7 @@ public class Comic extends Libro {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("Comic{");
+        final StringBuffer sb = new StringBuffer("Comic \uD83D\uDE03 {");
         sb.append("id='").append(id).append('\'');
         sb.append(", title='").append(title).append('\'');
         sb.append(", author='").append(author).append('\'');
