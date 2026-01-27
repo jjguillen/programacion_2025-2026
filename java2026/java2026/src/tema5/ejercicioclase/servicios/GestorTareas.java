@@ -6,6 +6,9 @@ import tema5.ejercicioclase.modelos.Tarea;
 import tema5.ejercicioclase.modelos.TareaBase;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
 public class GestorTareas {
 
@@ -84,14 +87,7 @@ public class GestorTareas {
      * @return ArrayList<Tarea>
      */
     public ArrayList<Tarea> getTareasUrgentes() {
-        ArrayList<Tarea> lista = new ArrayList<>();
-        for(Tarea tarea : tareas) {
-            if ( tarea.getTipo().equals("URGENTE") ) {
-                //Añadir a la nueva lista si la tarea es URGENTE
-                lista.add(tarea);
-            }
-        }
-        return lista;
+        return getTareasPorPrioridad(PrioridadTarea.URGENTE);
     }
 
     /**
@@ -114,6 +110,26 @@ public class GestorTareas {
         for(Tarea tarea : getTareasPendientes()) {
             IO.println(tarea);
         }
+    }
+
+    public void contarTareasPorEstado() {
+        IO.println("Tareas por estado del usuario " + nombreUsuario);
+        IO.println("Tareas pendientes: " + getTareasPendientes().size());
+        IO.println("Tareas completadas: " + getTareasPorEstado(EstadoTarea.COMPLETADA).size());
+        IO.println("Tareas canceladas: " + getTareasPorEstado(EstadoTarea.CANCELADA).size());
+        IO.println("Tareas en progreso: " + getTareasPorEstado(EstadoTarea.EN_PROGRESO).size());
+    }
+
+    public double calcularPorcentajeCompletadas() {
+        return  ((double) getTareasPorEstado(EstadoTarea.COMPLETADA).size() / tareas.size()) * 100;
+    }
+
+    public List<Tarea> ordenarPorPrioridad() {
+        List<Tarea> tareasOrdenadas = new ArrayList<>(tareas);
+        //tareasOrdenadas.sort(Comparator.comparing(Tarea::getPrioridad).reversed());
+
+        Arrays.sort(tareasOrdenadas.toArray());
+        return tareasOrdenadas;
     }
 
 

@@ -7,7 +7,7 @@ import java.time.LocalDate;
  * Va a ser el padre de una herencia --> TareaUrgente y TareaProgramada serán sus hijas
  * Implementa interfaz tarea
  */
-public abstract class TareaBase implements Tarea {
+public abstract class TareaBase implements Tarea, Comparable<TareaBase> {
 
     //Contador de tareas, común a todas las instancias
     private static Integer contadorId = 1;
@@ -112,4 +112,8 @@ public abstract class TareaBase implements Tarea {
         IO.println(this);
     }
 
+    @Override
+    public int compareTo(TareaBase o) {
+        return this.prioridad.getValor() - o.prioridad.getValor();
+    }
 }

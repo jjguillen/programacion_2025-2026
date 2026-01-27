@@ -1,9 +1,6 @@
 package tema5.ejercicioclase.aplicacion;
 
-import tema5.ejercicioclase.modelos.EstadoTarea;
-import tema5.ejercicioclase.modelos.PrioridadTarea;
-import tema5.ejercicioclase.modelos.TareaProgramada;
-import tema5.ejercicioclase.modelos.TareaUrgente;
+import tema5.ejercicioclase.modelos.*;
 import tema5.ejercicioclase.servicios.GestorTareas;
 
 import java.time.LocalDate;
@@ -29,16 +26,27 @@ public class Aplicacion {
         tp1.mostrarDetalle();
         IO.println(tp1.obtenerDiasSemana());
 
+        TareaProgramada tp2 = new TareaProgramada("Estudiar más",
+                "La herencia no me sale", PrioridadTarea.ALTA,
+                LocalDate.of(2026, 1, 27),
+                LocalTime.of(8, 0));
+
         GestorTareas gt = new GestorTareas("Manolo Días");
         gt.agregarTarea(tu1);
         gt.agregarTarea(tp1);
+        gt.agregarTarea(tp2);
 
         gt.listarTareas();
 
         IO.println("Tareas completadas: ");
         IO.println(gt.getTareasPorEstado(EstadoTarea.COMPLETADA));
 
+        gt.contarTareasPorEstado();
+        IO.println("Porcentaje completadas: " + gt.calcularPorcentajeCompletadas() + " %");
 
-
+        IO.println("Tareas ordenadas por prioridad: ");
+        for(Tarea t: gt.ordenarPorPrioridad()) {
+            IO.println(t);
+        }
     }
 }
