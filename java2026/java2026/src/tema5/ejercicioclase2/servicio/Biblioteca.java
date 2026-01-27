@@ -1,13 +1,13 @@
 package tema5.ejercicioclase2.servicio;
 
-import tema5.ejercicioclase2.modelos.ContenidoDigital;
+import tema5.ejercicioclase2.modelos.Libro;
 
 import java.util.ArrayList;
 
 public class Biblioteca {
 
     private String nombre;
-    private ArrayList<ContenidoDigital> contenidos;
+    private ArrayList<Libro> contenidos;
 
     public Biblioteca(String nombre) {
         this.nombre = nombre;
@@ -18,7 +18,7 @@ public class Biblioteca {
         return nombre;
     }
 
-    public ArrayList<ContenidoDigital> getContenidos() {
+    public ArrayList<Libro> getContenidos() {
         return contenidos;
     }
 
@@ -26,16 +26,16 @@ public class Biblioteca {
         this.nombre = nombre;
     }
 
-    public void addContenido(ContenidoDigital cd) {
+    public void addContenido(Libro cd) {
         this.contenidos.add(cd);
     }
 
-    public void removeContenido(ContenidoDigital cd) {
+    public void removeContenido(Libro cd) {
         this.contenidos.remove(cd);
     }
 
     public void removeContenidoById(String id) {
-        for(ContenidoDigital cd : contenidos) {
+        for(Libro cd : contenidos) {
             if (cd.getId().equals(id)) {
                 contenidos.remove(cd);
             }
@@ -47,7 +47,7 @@ public class Biblioteca {
         final StringBuffer sb = new StringBuffer("Biblioteca{");
         sb.append("nombre='").append(nombre).append('\'');
         sb.append(", contenidos=").append('\n');
-        for(ContenidoDigital cd : contenidos)
+        for(Libro cd : contenidos)
             sb.append(cd).append('\n');
         sb.append('}');
         return sb.toString();

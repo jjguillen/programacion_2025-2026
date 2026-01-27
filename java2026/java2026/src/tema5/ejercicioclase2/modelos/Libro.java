@@ -74,4 +74,8 @@ public class Libro {
         sb.append('}');
         return sb.toString();
     }
+
+    public String getTipo() {
+        return "Libro";
+    }
 }
