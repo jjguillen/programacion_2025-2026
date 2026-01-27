@@ -34,6 +34,22 @@ public class Biblioteca {
         this.contenidos.remove(cd);
     }
 
+    public void removeContenidoById(String id) {
+        for(ContenidoDigital cd : contenidos) {
+            if (cd.getId().equals(id)) {
+                contenidos.remove(cd);
+            }
+        }
+    }
 
-
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("Biblioteca{");
+        sb.append("nombre='").append(nombre).append('\'');
+        sb.append(", contenidos=").append('\n');
+        for(ContenidoDigital cd : contenidos)
+            sb.append(cd).append('\n');
+        sb.append('}');
+        return sb.toString();
+    }
 }
