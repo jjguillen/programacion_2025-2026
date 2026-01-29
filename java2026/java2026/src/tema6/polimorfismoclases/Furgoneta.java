@@ -31,6 +31,9 @@ public class Furgoneta extends Vehiculo {
 
     @Override
     public String metodoPolimorfico() {
+        Integer i;
+        Double d;
+
         return "Nooooooooooooooooooo";
     }
 
