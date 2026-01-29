@@ -2,7 +2,7 @@
 
 ## Interfaz - Notificable 
 - void enviar();
-- 
+
 ## Clase base - Notificacion implements Notificable
 - Atributos: titulo, mensaje, usuario, fecha (LocalDateTime), leida (boolean)
 - Constructor con todo menos fecha (LocalDateTime.now()) y leida (false)
