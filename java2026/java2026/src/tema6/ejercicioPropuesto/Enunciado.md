@@ -1,5 +1,19 @@
 # Sistema de notificaciones
 
+## Clase de servicios - SistemaNotificaciones
+- Atributos: ArrayList<Notificacion> notificaciones
+- Constructor
+- Getter
+- Métodos:
+  - Añadir notificación
+  - Eliminar notificación
+  - Enviar todas las notificaciones
+  - Pintar resumen de todas las notificaciones
+  - Pintar resumen de notificaciones por prioridad (*)
+  - Pintar notificaciones leídas
+  - Mostrar número de notificaciones pendientes de leer
+
+
 ## Interfaz - Notificable 
 - void enviar();
 
@@ -58,18 +72,6 @@
       - "\u2705" si SUCCESS
     - int getPrioridad(): para ERROR 4, y para el resto 2 
 
-## Clase de servicios - SistemaNotificaciones
-- Atributos: ArrayList<Notificacion> notificaciones
-- Constructor
-- Getter
-- Métodos:
-  - Añadir notificación
-  - Eliminar notificación
-  - Enviar todas las notificaciones
-  - Pintar resumen de todas las notificaciones
-  - Pintar resumen de notificaciones por prioridad (*)
-  - Pintar notificaciones leídas
-  - Mostrar número de notificaciones pendientes de leer
 
 ## Clase de aplicacion - App
 - Crear objeto SistemaNotificaciones
