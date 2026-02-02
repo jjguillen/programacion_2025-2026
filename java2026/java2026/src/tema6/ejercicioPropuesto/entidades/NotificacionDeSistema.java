@@ -1,4 +1,4 @@
-package tema6.ejercicioPropuesto;
+package tema6.ejercicioPropuesto.entidades;
 
 public class NotificacionDeSistema extends Notificacion{
     private TipoAlerta tipo;
