@@ -8,7 +8,7 @@ import java.util.Comparator;
 import java.util.List;
 
 public class SistemaNotificaciones {
-    private List<Notificacion> notificaciones = new ArrayList<>();
+    private final List<Notificacion> notificaciones = new ArrayList<>();
 
     public List<Notificacion> getNotificaciones() {
         return notificaciones;
@@ -57,12 +57,6 @@ public class SistemaNotificaciones {
         }
         return contador;
     }
-
-
-
-
-
-
 
 
 }
