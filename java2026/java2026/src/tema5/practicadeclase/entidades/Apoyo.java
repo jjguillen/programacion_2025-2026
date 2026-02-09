@@ -31,7 +31,10 @@ public class Apoyo extends Jugador {
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Apoyo{");
-        sb.append("curacionesPorPartida=").append(curacionesPorPartida);
+        sb.append("id=").append(id);
+        sb.append(", alias='").append(alias).append('\'');
+        sb.append(", puntos=").append(puntos);
+        sb.append(", curacionesPorPartida=").append(curacionesPorPartida);
         sb.append(", eficienciaAsistencia=").append(eficienciaAsistencia);
         sb.append('}');
         return sb.toString();

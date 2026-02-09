@@ -56,7 +56,8 @@ public class Equipo {
      */
     public void imprimirDatosEquipo() {
         IO.println( "Equipo: " + nombre + " (" + pais + ")");
-        IO.println( "Total de puntos: " + calcularTotalPuntos());
+        //IO.println( "Total de puntos: " + calcularTotalPuntos());
+        IO.println( "Total de puntos: " + this.totalPuntos); //*
     }
 
     /**
@@ -65,6 +66,7 @@ public class Equipo {
      */
     public void nuevoJugador(Jugador jugador) {
         jugadores.add(jugador);
+        this.totalPuntos += jugador.getPuntos(); //*
     }
 
     /**
@@ -76,6 +78,7 @@ public class Equipo {
         for(Jugador jugador: jugadores) {
             total += jugador.getPuntos();
         }
+        this.totalPuntos = total; //*
         return total;
     }
 
@@ -88,8 +91,12 @@ public class Equipo {
         }
     }
 
+    /**
+     * Busca un jugador por su id
+     * @param id
+     * @return el Jugador con ese id o null si no se encuentra
+     */
     public Jugador buscarJugadorPorId(Integer id) {
-        //Forma1
         for(Jugador jugador: jugadores) {
             if (jugador.getId().equals(id)) {
                 return jugador;

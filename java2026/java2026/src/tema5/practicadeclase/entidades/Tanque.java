@@ -38,4 +38,16 @@ public class Tanque extends Jugador  {
         IO.println("Daño recibido: " + this.danioRecibido);
         IO.println("Defensa promedio: " + this.defensaPromedio);
     }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("Tanque{");
+        sb.append("id=").append(id);
+        sb.append(", alias='").append(alias).append('\'');
+        sb.append(", puntos=").append(puntos);
+        sb.append(", danioRecibido=").append(danioRecibido);
+        sb.append(", defensaPromedio=").append(defensaPromedio);
+        sb.append('}');
+        return sb.toString();
+    }
 }

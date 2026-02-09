@@ -3,7 +3,7 @@ package tema5.practicadeclase.entidades;
 import java.util.Objects;
 
 public abstract class Jugador {
-    private static Integer inc = 1;
+    private static Integer inc = 1000;
 
     protected Integer id;
     protected String alias;
