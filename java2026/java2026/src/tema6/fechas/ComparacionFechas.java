@@ -7,6 +7,7 @@ public class ComparacionFechas {
 
     static void main() {
 
+        //Comparación fechas: isAfter, isBefore, isEqual
         LocalDateTime fecha = LocalDateTime.now().plusDays(1);
 
         IO.println("Mañana es posterior a hoy " + fecha.isAfter(LocalDateTime.now()));
