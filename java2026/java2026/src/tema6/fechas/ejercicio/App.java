@@ -42,8 +42,9 @@ public class App {
 
         IO.println();
         IO.println("--- COMPROBACIÓN DE SOLAPAMIENTO ---");
+        IO.println("¿Se solapan s1 y s3?: " + (s1.estanSolapadas(s3)));
         Sesion s4 = new Sesion(LocalTime.of(10, 30), LocalTime.of(12, 0));
-        IO.println("¿Se solapan s1 y s4?: " + (s1.estanSolapadas(s4) ? "Sí" : "No"));
+        IO.println("¿Se solapan s1 y s4?: " + (s1.estanSolapadas(s4)));
 
         // Parte 3: Examenes ------------
         // uno el 15 de diciembre de 2025 a las 10:00
@@ -58,16 +59,16 @@ public class App {
         IO.println("Examen 1: " + ex1.getNombre());
         IO.println("Fecha y hora: " + ex1.getFechaHora());
         IO.println("¿Ha pasado el examen 1?: " + ex1.haPasado());
-        IO.println("Tiempo relativo al examen 1: " + ex1.tiempoRelativo().toDays() + " días" +
-                        ex1.tiempoRelativo().toHoursPart() + " horas" +
+        IO.println("Tiempo relativo al examen 1: " + ex1.tiempoRelativo().toDays() + " días " +
+                        ex1.tiempoRelativo().toHoursPart() + " horas " +
                         ex1.tiempoRelativo().toMinutesPart() + " minutos");
 
         IO.println();
         IO.println("Examen 2: " + ex2.getNombre());
         IO.println("Fecha y hora: " + ex2.getFechaHora());
         IO.println("¿Ha pasado el examen 2?: " + (ex2.haPasado() ? "Sí" : "No"));
-        IO.println("Tiempo relativo al examen 2: " + ex2.tiempoRelativo().toDays() + " días" +
-                ex2.tiempoRelativo().toHoursPart() + " horas" +
+        IO.println("Tiempo relativo al examen 2: " + ex2.tiempoRelativo().toDays() + " días " +
+                ex2.tiempoRelativo().toHoursPart() + " horas " +
                 ex2.tiempoRelativo().toMinutesPart() + " minutos");
     }
 
