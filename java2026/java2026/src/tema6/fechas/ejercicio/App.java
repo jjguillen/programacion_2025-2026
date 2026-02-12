@@ -73,6 +73,11 @@ public class App {
                 ex2.tiempoRelativo().toHoursPart() + " horas " +
                 ex2.tiempoRelativo().toMinutesPart() + " minutos");
 
+        IO.println(Utils.esFinDeSemana(LocalDate.of(2026, 2, 14)));
+
+
+
+
     }
 
 
