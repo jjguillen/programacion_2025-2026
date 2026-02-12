@@ -73,9 +73,16 @@ public class App {
                 ex2.tiempoRelativo().toHoursPart() + " horas " +
                 ex2.tiempoRelativo().toMinutesPart() + " minutos");
 
-        IO.println(Utils.esFinDeSemana(LocalDate.of(2026, 2, 14)));
+        // Parte 4: Utilidades ------------
+        IO.println("¿Es fin de semana el 14 de febrero de 2026?: " +
+                Utils.esFinDeSemana(LocalDate.of(2026, 2, 14)));
 
-
+        IO.println();
+        IO.println("--- CALENDARIO LECTIVO ---");
+        for(LocalDate dia: Utils.generarCalendarioLectivo(LocalDate.of(2025, 9, 15),
+                LocalDate.of(2026, 5, 30))) {
+            IO.println(dia);
+        }
 
 
     }
