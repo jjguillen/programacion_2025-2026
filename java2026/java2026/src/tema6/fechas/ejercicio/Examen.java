@@ -57,13 +57,13 @@ public class Examen {
     }
 
     /**
-     * Devuelve el tiempo que falta para el examen (si no ha pasado).
-     * Si ya ha pasado, devuelve Duration.ZERO.
+     * Devuelve el tiempo que ha pasado del examen, si ya ha pasado.
+     * Si no ha pasado aún, devuelve Duration.ZERO.
      */
-    public Duration tiempoFalta() {
+    public Duration tiempoPasado() {
         if (haPasado())
+            return Duration.between(fechaHora, LocalDateTime.now());
+        else
             return Duration.ZERO;
-
-        return Duration.between(LocalDateTime.now(), fechaHora);
     }
 }
