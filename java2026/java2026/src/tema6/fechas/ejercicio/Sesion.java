@@ -58,7 +58,8 @@ public class Sesion {
      * @return
      */
     public boolean estanSolapadas(Sesion otraSesion) {
-        return this.horaInicio.isBefore(otraSesion.horaFin) && this.horaFin.isAfter(otraSesion.horaInicio);
+        //return this.horaInicio.isBefore(otraSesion.horaFin) && this.horaFin.isAfter(otraSesion.horaInicio);
+        return !(this.horaInicio.isAfter(otraSesion.horaFin) || this.horaFin.isBefore(otraSesion.horaInicio));
     }
 
     /**

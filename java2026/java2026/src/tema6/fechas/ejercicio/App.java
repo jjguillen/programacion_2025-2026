@@ -11,7 +11,8 @@ public class App {
         // Parte 1: Curso ------------
         // Un curso que dure desde el 1 de septiembre de 2025 hasta el 30 de junio de 2026
         Curso c1 = new Curso("IA para principiantes",
-                LocalDate.of(2025, 9, 1), LocalDate.of(2026, 6, 30));
+                LocalDate.of(2025, 9, 1),
+                LocalDate.of(2026, 6, 30));
 
         IO.println("--- INFORMACIÓN DEL CURSO ---");
         IO.println("Curso: " + c1.getNombre());
@@ -19,6 +20,7 @@ public class App {
         IO.println("Total de días (ChronoUnit): " + c1.totalDias());
         IO.println("Días desde el inicio (a hoy): " + c1.diasDesdeInicio());
         IO.println("¿Está activo hoy?: " + c1.estaActivo());
+
 
         // Parte 2: Sesiones ------------
         // Tres sesiones de clase: 9:00-11:00, 11:30-13:30, 15:00-17:00
@@ -60,8 +62,8 @@ public class App {
         IO.println("Fecha y hora: " + ex1.getFechaHora());
         IO.println("¿Ha pasado el examen 1?: " + ex1.haPasado());
         IO.println("Tiempo relativo al examen 1: " + ex1.tiempoRelativo().toDays() + " días " +
-                        ex1.tiempoRelativo().toHoursPart() + " horas " +
-                        ex1.tiempoRelativo().toMinutesPart() + " minutos");
+                ex1.tiempoRelativo().toHoursPart() + " horas " +
+                ex1.tiempoRelativo().toMinutesPart() + " minutos");
 
         IO.println();
         IO.println("Examen 2: " + ex2.getNombre());
@@ -70,6 +72,7 @@ public class App {
         IO.println("Tiempo relativo al examen 2: " + ex2.tiempoRelativo().toDays() + " días " +
                 ex2.tiempoRelativo().toHoursPart() + " horas " +
                 ex2.tiempoRelativo().toMinutesPart() + " minutos");
+
     }
 
 

@@ -51,6 +51,7 @@ public class Examen {
 
     /**
      * Indica si el examen ya ha pasado.
+     * @return boolean
      */
     public boolean haPasado() {
         return LocalDateTime.now().isAfter(fechaHora);
@@ -59,6 +60,7 @@ public class Examen {
     /**
      * Devuelve el tiempo que ha pasado del examen, si ya ha pasado.
      * Si no ha pasado aún, devuelve Duration.ZERO.
+     * @return Duration
      */
     public Duration tiempoPasado() {
         if (haPasado())
