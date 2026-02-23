@@ -11,4 +11,6 @@ class PilaNumerica<T extends Number>
 #### Double suma(): devuelve la suma de todos los elementos de la lista.
 #### pintar(): imprime todos los elementos de la lista.
 
-### Crea una Pila de enteros y otra de doubles, añádelas algunos números y muestra su suma y su contenido.
+#### - Crea una Pila de enteros y otra de doubles
+#### - Añádeles algunos números y muestra su suma y su contenido.
+#### - Elimina algún elemento de las pilas y vuelve a mostrar su contenido.
