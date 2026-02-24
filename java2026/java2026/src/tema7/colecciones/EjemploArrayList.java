@@ -15,7 +15,7 @@ public class EjemploArrayList {
         /**
          *   --- ARRAYLIST ---
          *   1. Bueno para recorrer
-         *   2. Acceso posicional
+         *   2. Acceso posicional instantáneo
          *   3. Eliminación posicional
          *   4. Sublistas
          *   5. Búsqueda -> O(n) hay que recorrese la lista

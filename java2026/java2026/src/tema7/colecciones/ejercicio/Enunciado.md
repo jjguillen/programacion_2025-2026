@@ -27,5 +27,5 @@ y añade el index 'i' al título y artista. Duración aleatoria entre 1 y 100 se
 8. Mide el tiempo de acceso aleatorio en cada una de las listas.
 9. Elimina de cada lista 1000 elementos al inicio de cada una.
 10. Mide el tiempo que tarda en eliminar elementos cada lista.
-11. Busca con indexOf 10 canciones aleatorias en cada lista.
+11. Busca con indexOf 100 canciones aleatorias en cada lista.
 12. Mide el tiempo que tarda en buscar elementos cada lista.

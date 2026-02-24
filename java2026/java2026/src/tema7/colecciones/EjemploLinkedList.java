@@ -17,10 +17,10 @@ public class EjemploLinkedList {
         /**
          *   --- LINKEDLIST ---
          *   1. Bueno para recorrer, pero peor que ArrayList
-         *   2. Acceso posicional, peor que ArrayList
+         *   2. Acceso posicional, mucho peor que ArrayList
          *   3. Eliminación posicional. Mejor por no desplazar, peor por llegar elemento
          *   4. Sublistas
-         *   5. Búsqueda -> O(n) hay que recorrese la lista
+         *   5. Búsqueda -> O(n) hay que recorrese la lista, un poco peor que ArrayList
          *   6. addFirst, removeFirst -> eficientes
          *   7. addLast, removeLast -> eficientes, igual
          *   8. Bueno para COLAS y PILAS
