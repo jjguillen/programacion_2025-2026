@@ -21,7 +21,7 @@ public class EjemploArrayList {
          *   5. Búsqueda -> O(n) hay que recorrese la lista
          *   6. addFirst, removeFirst -> ineficientes
          *   7. Mejor usar addLast y removeLast
-         *   8. Bueno para PILAS, regular para COLAS
+         *   8. Bueno para PILAS, malo para COLAS
          */
 
 
