@@ -23,6 +23,6 @@
 - Mostrar ranking
 - Eliminar jugador
 - Mostrar ranking
-- Modificar puntuacion de un jugador (*)
+- Modificar puntuacion de un jugador (*, qué pasa en el TreeSet?)
 - Mostrar ranking
 - Mostrar top 3
