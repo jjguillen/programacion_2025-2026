@@ -2,7 +2,7 @@ package tema7.conjuntos.TreeSet;
 
 import java.util.Objects;
 
-public class Producto {
+public class Producto implements Comparable<Producto>{
 
     private static long contador = 1000;
 
@@ -72,5 +72,21 @@ public class Producto {
     @Override
     public int hashCode() {
         return Objects.hashCode(id);
+    }
+
+    /**
+     * Devolver <0, 0, >0
+     * @param o the object to be compared.
+     * @return
+     */
+    @Override
+    public int compareTo(Producto o) {
+        //return this.nombre.compareTo(o.nombre);
+        int resultado = this.nombre.compareTo(o.nombre);
+        if (resultado == 0) {
+            return this.precio.compareTo(o.precio);
+        } else {
+            return resultado;
+        }
     }
 }
