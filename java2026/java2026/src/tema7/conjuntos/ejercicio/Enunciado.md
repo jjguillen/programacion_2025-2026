@@ -8,7 +8,6 @@
 - toString
 - Equals por id
 - Implementar Comparable<Jugador> por puntuacion
-- Avise un mensaje si el id está repetido (contains previo)
 
 2. Clase Ranking
 - Atributos: HashSet<Jugador> jugadores, TreeSet<Jugador> jugadoresOrdenados (puntuacion)
@@ -16,6 +15,7 @@
 - pintarJugadores
 - pintarRanking
 - registrarJugador(Jugador j)
+Avise un mensaje si el id está repetido (contains previo)
 - eliminarJugador(id)
 - modificarPuntuacion(id, puntuacion): buscar el jugador y cambiar su puntuación (en los dos?)
 - top(int n): devuelve el top n de jugadores
