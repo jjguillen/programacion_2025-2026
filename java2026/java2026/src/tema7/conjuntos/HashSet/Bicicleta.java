@@ -1,4 +1,4 @@
-package tema7.conjuntos;
+package tema7.conjuntos.HashSet;
 
 import java.util.Objects;
 
