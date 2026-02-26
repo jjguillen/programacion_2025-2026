@@ -5,18 +5,12 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class Ranking {
+public class RankingMejorado {
 
     private final Set<Jugador> jugadores = new HashSet<>();
-    private Set<Jugador> ranking = new TreeSet<>(Comparator.comparing(Jugador::getPuntos)
-            .thenComparing(Jugador::getId));
 
     public Set<Jugador> getJugadores() {
         return jugadores;
-    }
-
-    public Set<Jugador> getRanking() {
-        return ranking;
     }
 
     public void pintarJugadores() {
@@ -26,12 +20,20 @@ public class Ranking {
     }
 
     public void pintarRanking() {
+        Set<Jugador> ranking = new TreeSet<>(Comparator.comparing(Jugador::getPuntos)
+                .thenComparing(Jugador::getId));
+        ranking.addAll(jugadores);
+
         IO.println("--- RANKING POR PUNTUACION ---");
         for(Jugador jugador: ranking)
             IO.println(jugador);
     }
 
     public void top(int n) {
+        Set<Jugador> ranking = new TreeSet<>(Comparator.comparing(Jugador::getPuntos)
+                .thenComparing(Jugador::getId));
+        ranking.addAll(jugadores);
+
         int i = 0;
         IO.println("--- TOP " + n + " ---");
         for(Jugador jugador: ranking) {
@@ -52,8 +54,6 @@ public class Ranking {
             IO.println("Id de jugador repetido: " + jugador.getId());
         else {
             jugadores.add(jugador);
-            ranking.add(jugador);
-
         }
     }
 
@@ -64,23 +64,6 @@ public class Ranking {
     public void eliminarJugador(int id) {
         Jugador j = new Jugador(id, "", 0, 0, "");
         jugadores.remove(j);
-
-        /**
-        //En ranking es complicado de hacer, no es por id, es por puntuacion e id
-        j = null;
-        for(Jugador jugador: ranking) {
-            if(jugador.getId() == id) {
-                j = jugador;
-            }
-        }
-        ranking.remove(j);
-        */
-
-        //Mejor así
-        this.ranking.clear();
-        this.ranking.addAll(jugadores);
-
-
     }
 
     /**
@@ -96,21 +79,6 @@ public class Ranking {
                     jugador.setPuntos(puntuacion);
                 }
             }
-
-            /**
-            //Para ranking si lo hacemos con un for y luego con un set le
-            //cambiamos la puntuación no lo reordenaría
-            //ConcurrentModificationException
-            for(Jugador jugador: ranking) {
-                if (jugador.getId() == id) {
-                    jugador.setPuntos(puntuacion);
-                }
-            }
-            */
-
-            //Mejor así. Borramos el ranking y lo vuelve a crear con las nuevas puntuaciones
-            this.ranking.clear();
-            this.ranking.addAll(jugadores);
         } else {
             IO.println("Id de jugador no encontrado: " + id);
         }

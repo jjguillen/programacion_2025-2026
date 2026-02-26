@@ -3,7 +3,7 @@ package tema7.conjuntos.ejercicio;
 public class Main {
     static void main() {
 
-        Ranking ranking = new Ranking();
+        RankingMejorado ranking = new RankingMejorado();
         ranking.registrar(new Jugador(1, "Chokas", "España"));
         ranking.registrar(new Jugador(2, "Ibai", "España"));
         ranking.registrar(new Jugador(3, "YO", "España"));
@@ -16,7 +16,10 @@ public class Main {
 
         ranking.pintarRanking();
 
+        ranking.eliminarJugador(2);
 
+        ranking.pintarRanking();
+        ranking.pintarJugadores();
 
     }
 }
