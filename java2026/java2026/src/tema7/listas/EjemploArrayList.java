@@ -1,13 +1,11 @@
-package tema7.colecciones;
+package tema7.listas;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.LinkedList;
 import java.util.List;
 
-public class EjemploLinkedList {
-
+public class EjemploArrayList {
     static void pintar(List<Persona> listaPersonas) {
         for(Persona p: listaPersonas)
             IO.println(p);
@@ -15,20 +13,21 @@ public class EjemploLinkedList {
 
     static void main() {
         /**
-         *   --- LINKEDLIST ---
-         *   1. Bueno para recorrer, pero peor que ArrayList
-         *   2. Acceso posicional, mucho peor que ArrayList
-         *   3. Eliminación posicional. Mejor por no desplazar, peor por llegar elemento
+         *   --- ARRAYLIST ---
+         *   1. Bueno para recorrer
+         *   2. Acceso posicional instantáneo
+         *   3. Eliminación posicional
          *   4. Sublistas
-         *   5. Búsqueda -> O(n) hay que recorrese la lista, un poco peor que ArrayList
-         *   6. addFirst, removeFirst -> eficientes
-         *   7. addLast, removeLast -> eficientes, igual
-         *   8. Bueno para COLAS y PILAS
+         *   5. Búsqueda -> O(n) hay que recorrese la lista
+         *   6. addFirst, removeFirst -> ineficientes
+         *   7. Mejor usar addLast y removeLast
+         *   8. Bueno para PILAS, malo para COLAS
          */
 
 
+
         //Constructor de ArrayList pasándole una lista inicial INMUTABLE
-        List<Integer> numeros = new LinkedList<>(List.of(1,3,4,5,6,7,8,8));
+        List<Integer> numeros = new ArrayList<>(List.of(1,3,4,5,6,7,8,8));
         for(Integer n: numeros)
             IO.print(n + " ");
         IO.println();
@@ -55,7 +54,8 @@ public class EjemploLinkedList {
         IO.println();
 
 
-        List<Persona> listaPersonas = new LinkedList<>();
+        List<Persona> listaPersonas = new ArrayList<>();
+        //List<Persona> listaPersonas = new LinkedList<>();
 
         listaPersonas.add(new Persona("12345678A", "Pepe", "Perez", LocalDate.of(1990, 1, 2)));
         listaPersonas.add(new Persona("23456789B", "Juan", "Martínez", LocalDate.of(1991, 2, 3)));
@@ -126,42 +126,6 @@ public class EjemploLinkedList {
         listaPersonas.sort(Comparator.comparing(Persona::getFechaNacimiento));
         pintar(listaPersonas);
 
-        //INTERESANTE LOS MÉTODOS DE PILAS Y COLAS
-        //COLA (FIFO): add, poll, peek, offer(E) buscar
-        LinkedList<Integer> cola = new LinkedList<>();
-        cola.add(1);cola.add(2);
-        cola.add(3);cola.add(4);
-        cola.add(5);cola.add(6);
-        for(Integer i: cola)
-            IO.print(i + " ");
-        IO.println();
-        IO.println(cola.poll()); //Devuelve el primer elemento y lo elimina
-        IO.println(cola.poll());
-        for(Integer i: cola)
-            IO.print(i + " ");
-        IO.println();
-        IO.println(cola.peek()); //Lo devuelve sin eliminar
-        for(Integer i: cola)
-            IO.print(i + " ");
-        IO.println();
-
-        //PILA (LIFO): push, pop, peek
-        LinkedList<Integer> pila = new LinkedList<>();
-        pila.push(1);pila.push(2);
-        pila.push(3);pila.push(4);
-        pila.push(5);pila.push(6);
-        for(Integer i: pila)
-            IO.print(i + " ");
-        IO.println();
-        IO.println(pila.pop()); //Devuelve el primer elemento y lo elimina
-        IO.println(pila.pop());
-        for(Integer i: pila)
-            IO.print(i + " ");
-        IO.println();
-        IO.println(pila.peek()); //Lo devuelve sin eliminar
-        for(Integer i: pila)
-            IO.print(i + " ");
-        IO.println();
 
     }
 }

@@ -1,4 +1,4 @@
-package tema7.colecciones;
+package tema7.listas;
 
 import java.time.LocalDate;
 import java.util.Objects;

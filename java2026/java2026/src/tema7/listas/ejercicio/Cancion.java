@@ -1,4 +1,4 @@
-package tema7.colecciones.ejercicio;
+package tema7.listas.ejercicio;
 
 import java.util.Objects;
 
