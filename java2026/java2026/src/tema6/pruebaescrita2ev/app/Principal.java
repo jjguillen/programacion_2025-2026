@@ -127,6 +127,10 @@ public class Principal {
                     try {
                         Propietario p = clinica.buscarPropietarioPorDni(dni);
                         IO.println("Propietario encontrado: " + p.getNombre() + " " + p.getApellidos());
+                        IO.println("Animales asociados:");
+                        for (Animal a : p.getAnimales()) {
+                            IO.println(a.getNombre() + " - " + a.getRaza());
+                        }
                     } catch (Exception e) {
                         IO.println(e.getMessage());
                     }

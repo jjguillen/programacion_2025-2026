@@ -24,6 +24,7 @@ public abstract class Animal {
         this.fechaNacimiento = fechaNacimiento;
         this.peso = peso;
         this.propietario = propietario;
+        this.propietario.addAnimal(this);
         this.id = contadorId++;
         this.estado = EstadoAnimal.ALTA; // Inicializar el estado a ALTA por defecto
     }
