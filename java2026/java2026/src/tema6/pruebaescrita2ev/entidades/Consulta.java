@@ -18,6 +18,10 @@ public class Consulta implements Facturable {
 
     public Consulta(Animal animal, String veterinario, LocalDate fecha, TipoConsulta tipo, String diagnostico,
                     String tratamiento) {
+        if (fecha.isAfter(LocalDate.now())) {
+            throw new IllegalArgumentException("La fecha no puede ser anteriormente");
+        }
+
         this.animal = animal;
         this.veterinario = veterinario;
         this.fecha = fecha;
@@ -26,10 +30,6 @@ public class Consulta implements Facturable {
         this.tratamiento = tratamiento;
         this.id = contadorId++;
         this.precioTotal = animal.calcularCosteConsulta(tipo);
-
-        if (fecha.isAfter(LocalDate.now())) {
-            throw new IllegalArgumentException("La fecha no puede ser anteriormente");
-        }
     }
 
     public Long getId() {

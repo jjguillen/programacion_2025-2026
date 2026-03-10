@@ -17,6 +17,7 @@ public class Propietario extends Persona {
         super(propietario.getNombre(), propietario.getApellidos(), propietario.getDni(), propietario.getEmail(), propietario.getTelefono());
         this.direccion = propietario.getDireccion();
         this.animales = new ArrayList<>(propietario.getAnimales());
+        //this.animales = propietario.getAnimales(); //MAL
     }
 
     public String getDireccion() {

@@ -71,6 +71,7 @@ public class Clinica {
                 return p;
             }
         }
+        //No encontrado
         throw new PropietarioNoEncontradoException("No se ha encontrado ningún propietario con el DNI: " + dni);
     }
 
