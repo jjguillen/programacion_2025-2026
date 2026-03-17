@@ -33,10 +33,17 @@ public class Ejemplo {
         IO.println(diccionario.containsKey("house"));
         IO.println(diccionario.containsKey("dog"));
 
-        //Recorrer el mapa con for -> map.keySet() nos devuelve un Set con las claves
+        //Recorrer el mapa con for -> map.keySet() nos devuelve un Set con las claves Set<Clave>
         //Para cada clave sacamos su valor con diccionario.get(clave)
         IO.println("--- Claves ---");
         for(String clave : diccionario.keySet()) {
+            IO.println(clave + " -> " + diccionario.get(clave));
+        }
+
+        //Pintar el diccionario ordenado por claves
+        IO.println("--- Ordenado por claves ---");
+        Set<String> clavesOrdenadas = new TreeSet<>(diccionario.keySet());
+        for(String clave : clavesOrdenadas) {
             IO.println(clave + " -> " + diccionario.get(clave));
         }
 
@@ -47,17 +54,13 @@ public class Ejemplo {
         }
 
         //Mostrar los pares clave-valor como Entry<Clave, Valor>
+        //entrySet() me devuelve un Set<Entry<Clave, Valor>>
         IO.println("--- Entries ---");
         for(Map.Entry<String,String> entrada : diccionario.entrySet()) {
             IO.println(entrada.getKey() + " -> " + entrada.getValue());
         }
 
-        //Pintar el diccionario ordenado por claves
-        IO.println("--- Ordenado por claves ---");
-        Set<String> clavesOrdenadas = new TreeSet<>(diccionario.keySet());
-        for(String clave : clavesOrdenadas) {
-            IO.println(clave + " -> " + diccionario.get(clave));
-        }
+
 
 
 
