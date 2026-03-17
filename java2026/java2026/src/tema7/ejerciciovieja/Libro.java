@@ -1,7 +1,13 @@
 package tema7.ejerciciovieja;
 
+import lombok.Getter;
+import lombok.Setter;
+import org.apache.commons.codec.digest.DigestUtils;
+
 import java.util.Objects;
 
+@Getter
+@Setter
 public class Libro {
 
     private static Long contador = 0L;
@@ -11,6 +17,7 @@ public class Libro {
     protected String titulo;
     protected String autor;
     protected Integer anioPublicacion;
+    protected String code;
 
     public Libro(String isbn, String titulo, String autor, Integer anioPublicacion) {
         this.isbn = isbn;
@@ -18,46 +25,7 @@ public class Libro {
         this.autor = autor;
         this.anioPublicacion = anioPublicacion;
         this.id = contador++;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getIsbn() {
-        return isbn;
-    }
-
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
-    public Integer getAnioPublicacion() {
-        return anioPublicacion;
-    }
-
-    public void setAnioPublicacion(Integer anioPublicacion) {
-        this.anioPublicacion = anioPublicacion;
+        this.code = DigestUtils.shaHex(titulo + autor);
     }
 
     @Override
@@ -68,6 +36,7 @@ public class Libro {
         sb.append(", titulo='").append(titulo).append('\'');
         sb.append(", autor='").append(autor).append('\'');
         sb.append(", anioPublicacion=").append(anioPublicacion);
+        sb.append(", code='").append(code).append('\'');
         sb.append('}');
         return sb.toString();
     }
