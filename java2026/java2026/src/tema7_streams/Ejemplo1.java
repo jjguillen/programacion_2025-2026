@@ -3,6 +3,7 @@ package tema7_streams;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
 
 public class Ejemplo1 {
 
@@ -33,6 +34,10 @@ public class Ejemplo1 {
         IO.println("---------------");
         palabras.removeIf(palabra -> palabra.length() > 5); //Sí modifica la colección
         palabras.forEach(IO::println);
+
+        List<String> pls = List.of("Uno", "Dos", "Tres");
+
+
     }
 
 }
