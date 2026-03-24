@@ -1,5 +1,8 @@
 package tema7_streams.generarStreams;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 import java.util.stream.Stream;
 
 public class Main {
@@ -15,6 +18,17 @@ public class Main {
         Stream<Integer> impares = Stream.iterate(1, n -> n+2);
         impares
                 .limit(10)
+                .forEach(IO::println);
+
+        Stream<Integer> numerosAleatorios = Stream.generate(() -> (int) (Math.random()*1000));
+        numerosAleatorios
+                .limit(10)
+                .forEach(IO::println);
+
+        Stream<String> ciudades = List.of("Vera", "Garrucha", "Pulpí", "Antas").stream();
+        ciudades
+                .map(String::toUpperCase)
+                .sorted()
                 .forEach(IO::println);
     }
 }
