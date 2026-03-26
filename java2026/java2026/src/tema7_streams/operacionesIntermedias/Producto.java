@@ -1,5 +1,7 @@
 package tema7_streams.operacionesIntermedias;
 
+import java.util.Objects;
+
 public class Producto {
 
     private static Integer contador = 0;
@@ -68,5 +70,17 @@ public class Producto {
         sb.append(", categoria=").append(categoria);
         sb.append('}');
         return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Producto producto = (Producto) o;
+        return Objects.equals(nombre, producto.nombre);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(nombre);
     }
 }
