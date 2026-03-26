@@ -1,4 +1,4 @@
-package tema7_streams.operacionesIntermedias;
+package tema7_streams.operacionesTerminales;
 
 public class Producto {
 
