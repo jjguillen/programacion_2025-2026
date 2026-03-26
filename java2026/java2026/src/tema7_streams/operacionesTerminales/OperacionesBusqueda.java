@@ -29,12 +29,26 @@ public class OperacionesBusqueda {
                 .noneMatch(p -> p.getCategoria().equals(CategoriaProducto.TABLETS));
         IO.println("No son tablets? " + noSonTablets);
 
+        //findAny -> productos por encima de 1200
         Optional<Producto> productoCaro = tienda.stream()
-                .filter(p -> p.getPrecio() >= 1600.0)
+                .filter(p -> p.getPrecio() >= 1200.0)
                 .findAny();
         productoCaro.ifPresent(producto -> IO.println(producto.getNombre()));
 
+        //findFirst -> Primer portátil que encuentres
+        Optional<Producto> primerPortatil = tienda.stream()
+                .filter(p -> p.getCategoria().equals(CategoriaProducto.PORTATILES))
+                .findFirst();
+        if (primerPortatil.isPresent()) {
+            Producto portatil = primerPortatil.get(); //Con get extraemos el objeto del Optional
+            IO.println(portatil.getNombre());
+        }
 
+        //Optional con orElse
+        Producto primerPeriferico = tienda.stream()
+                .filter(p -> p.getCategoria().equals(CategoriaProducto.PERIFERICOS))
+                .findFirst()
+                .orElse(new Producto("Producto No encontrado","",0.0,CategoriaProducto.PERIFERICOS));
 
 
 
