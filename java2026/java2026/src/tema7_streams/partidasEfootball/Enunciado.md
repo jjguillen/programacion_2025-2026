@@ -52,17 +52,12 @@ Contar cuántas partidas hay de cada modo (groupingBy).
 #### Consulta 3: Goles totales marcados
 Suma de todos los golesLocal.
 
-#### Consulta 4: Mejor rival derrotado
-Partida con más estrellas contra cada rival, ordenada por estrellas.
-
-text
-Mejores victorias por rival:
-vs CPU_Madrid: 3-1 (120★)
-vs Rafael_Torres: 2-0 (95★)  
-vs PSG: 4-2 (180★)
+#### Consulta 4: Partida ganadora con más estrellas
+Encontrar la partida ganada con más estrellas (sin agrupar por rival).
 
 #### Consulta 5: Media de estrellas por modo
 Calcular averagingInt(estrellasGanadas) por modoJuego.
+Collectors.groupingBy(modoJuego, Collectors.averagingInt(Partida::getEstrellasGanadas))
 
 text
 Estrellas medias por modo:
@@ -74,7 +69,6 @@ Evento: 85★
 Filtrar duracion que contenga "20min" o "30min".
 
 #### Consulta 7: Equipos más usados
-
 Los 5 equiposLocal con más apariciones.
 
 text
