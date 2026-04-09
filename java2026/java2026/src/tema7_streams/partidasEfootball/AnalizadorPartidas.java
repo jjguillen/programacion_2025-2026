@@ -25,13 +25,14 @@ public class AnalizadorPartidas {
         partidas.add(new Partida(8, "Maria_Garcia", "PSG", "PvP", "Real_Madrid", 3, 1, "30min", LocalDateTime.parse("2026-04-08T20:15"), 140));
         partidas.add(new Partida(9, "Carlos_Martin", "CPU_Madrid", "IA", "Atletico_Madrid", 0, 3, "12min", LocalDateTime.parse("2026-04-09T19:45"), 30));
         partidas.add(new Partida(10, "Juan_Lopez", "Rafael_Torres", "Evento", "FC_Barcelona", 2, 1, "20min", LocalDateTime.parse("2026-04-10T21:00"), 110));
+        partidas.add(new Partida(10, "Juan_Lopez", "Rafael_Torres", "Evento", "FC_Barcelona", 2, 1, "20min", LocalDateTime.parse("2026-05-10T21:00"), 110));
     }
 
     // Consulta 1: Victorias del jugador
     public List<Partida> obtenerVictorias() {
         return partidas.stream()
                 .filter(p -> p.getGolesLocal() > p.getGolesVisitante())
-                .collect(Collectors.toList());
+                .collect(Collectors.toList()); //.toList()
     }
 
     // Consulta 2: Partidas por modo de juego
@@ -43,7 +44,8 @@ public class AnalizadorPartidas {
     // Consulta 3: Goles totales marcados
     public int sumarGolesTotales() {
         return partidas.stream()
-                .mapToInt(Partida::getGolesLocal)
+                //.mapToInt(Partida::getGolesLocal)
+                .mapToInt(p -> p.getGolesLocal() + p.getGolesVisitante())
                 .sum();
     }
 
@@ -64,7 +66,11 @@ public class AnalizadorPartidas {
     // Consulta 6: Partidas de más de 20 minutos
     public List<Partida> partidasMasDe20Min() {
         return partidas.stream()
-                .filter(p -> p.getDuracion().contains("20min") || p.getDuracion().contains("30min"))
+                .map(p -> {
+                    p.setDuracion(p.getDuracion().replace("min", ""));
+                    return p;
+                })
+                .filter(p -> Integer.parseInt(p.getDuracion()) > 20 )
                 .collect(Collectors.toList());
     }
 
@@ -91,7 +97,7 @@ public class AnalizadorPartidas {
         return partidas.stream()
                 .filter(p -> p.getGolesLocal() > p.getGolesVisitante())
                 .collect(Collectors.groupingBy(
-                        p -> p.getFecha().getMonth().toString() + " " + p.getFecha().getYear(),
+                        p -> p.getFecha().getMonth().toString(),
                         Collectors.counting()));
     }
 
