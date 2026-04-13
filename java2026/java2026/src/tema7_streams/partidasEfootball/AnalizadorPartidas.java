@@ -25,7 +25,7 @@ public class AnalizadorPartidas {
         partidas.add(new Partida(8, "Maria_Garcia", "PSG", "PvP", "Real_Madrid", 3, 1, "30min", LocalDateTime.parse("2026-04-08T20:15"), 140));
         partidas.add(new Partida(9, "Carlos_Martin", "CPU_Madrid", "IA", "Atletico_Madrid", 0, 3, "12min", LocalDateTime.parse("2026-04-09T19:45"), 30));
         partidas.add(new Partida(10, "Juan_Lopez", "Rafael_Torres", "Evento", "FC_Barcelona", 2, 1, "20min", LocalDateTime.parse("2026-04-10T21:00"), 110));
-        partidas.add(new Partida(10, "Juan_Lopez", "Rafael_Torres", "Evento", "FC_Barcelona", 2, 1, "20min", LocalDateTime.parse("2026-05-10T21:00"), 110));
+        partidas.add(new Partida(11, "Juan_Lopez", "Rafael_Torres", "Evento", "FC_Barcelona", 2, 1, "20min", LocalDateTime.parse("2026-05-10T21:00"), 110));
     }
 
     // Consulta 1: Victorias del jugador
