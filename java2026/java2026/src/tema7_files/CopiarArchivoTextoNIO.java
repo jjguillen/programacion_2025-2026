@@ -9,7 +9,7 @@ public class CopiarArchivoTextoNIO {
 
         try {
             BufferedReader br = Files.newBufferedReader(Paths.get("src/tema7_files/lectura.txt"));
-            BufferedWriter bs = Files.newBufferedWriter(Paths.get("src/tema7_files/lectura.bak"));
+            BufferedWriter bs = Files.newBufferedWriter(Paths.get("src/tema7_files/lectura.txt"));
             String linea = null;
             while((linea = br.readLine()) != null) {
                 IO.println(linea);

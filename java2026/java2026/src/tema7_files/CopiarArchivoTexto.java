@@ -7,7 +7,7 @@ public class CopiarArchivoTexto {
 
         try {
             BufferedReader br = new BufferedReader(new FileReader("src/tema7_files/lectura.txt"));
-            BufferedWriter bs = new BufferedWriter(new FileWriter("src/tema7_files/lectura.bak"));
+            BufferedWriter bs = new BufferedWriter(new FileWriter("src/tema7_files/lectura.txt"));
             String linea = null;
             while((linea = br.readLine()) != null) {
                 IO.println(linea);
